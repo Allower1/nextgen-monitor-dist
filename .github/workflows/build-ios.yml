@@ -1,0 +1,103 @@
+name: Build NEXTGEN Monitor
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "ios/**"
+      - "scripts/ios/**"
+      - ".github/workflows/build-ios.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nextgen-monitor-ios-main
+  cancel-in-progress: true
+
+jobs:
+  build-ios:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Toolchain
+        run: |
+          sw_vers
+          xcodebuild -version
+
+      - name: Build unsigned native iPhone app
+        env:
+          BUILD_ROOT: ${{ runner.temp }}/nextgen-ios
+        run: |
+          set -euo pipefail
+          BUILD_NUMBER=$((1000 + GITHUB_RUN_NUMBER))
+          rm -rf "$BUILD_ROOT" dist Payload
+          mkdir -p "$BUILD_ROOT"
+          xcodebuild \
+            -project ios/NEXTGENMonitor.xcodeproj \
+            -scheme NEXTGENMonitor \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination "generic/platform=iOS" \
+            -derivedDataPath "$BUILD_ROOT/DerivedData" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            CURRENT_PROJECT_VERSION="$BUILD_NUMBER" \
+            build
+
+          PRODUCTS="$BUILD_ROOT/DerivedData/Build/Products/Release-iphoneos"
+          APP="$(find "$PRODUCTS" -maxdepth 1 -type d -name "*.app" -print -quit)"
+          test -n "$APP"
+          test -f "$APP/Info.plist"
+          mkdir -p dist Payload
+          cp -R "$APP" Payload/
+          ditto -c -k --sequesterRsrc --keepParent Payload dist/NEXTGENMonitor-unsigned.ipa
+          /usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP/Info.plist" > dist/bundle-id.txt
+          /usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "$APP/Info.plist" > dist/version.txt
+          /usr/libexec/PlistBuddy -c "Print :CFBundleVersion" "$APP/Info.plist" > dist/build-version.txt
+          shasum -a 256 dist/NEXTGENMonitor-unsigned.ipa | awk "{print \$1}" > dist/sha256.txt
+          stat -f "%z" dist/NEXTGENMonitor-unsigned.ipa > dist/size.txt
+
+      - name: Verify native artifact
+        run: |
+          set -euo pipefail
+          test "$(cat dist/bundle-id.txt)" = "com.nextgen.monitor"
+          test -s dist/NEXTGENMonitor-unsigned.ipa
+          python3 - <<"PY"
+          import plistlib, zipfile
+          p="dist/NEXTGENMonitor-unsigned.ipa"
+          with zipfile.ZipFile(p) as z:
+              info=next(n for n in z.namelist() if n.endswith(".app/Info.plist"))
+              pl=plistlib.loads(z.read(info))
+              assert pl["CFBundleIdentifier"] == "com.nextgen.monitor"
+              assert pl["DTPlatformName"] == "iphoneos"
+              assert int(pl["MinimumOSVersion"].split(".")[0]) <= 26
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: NEXTGENMonitor-unsigned
+          path: dist/
+          retention-days: 30
+
+      - name: Publish SideStore source and IPA
+        run: |
+          set -euo pipefail
+          CREATED_AT="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          python3 scripts/ios/publish_dist.py \
+            --artifact-dir dist \
+            --dist-dir . \
+            --icon ios/NEXTGENMonitor/Resources/Assets.xcassets/AppIcon.appiconset/icon-1024.png \
+            --created-at "$CREATED_AT"
+          git config user.name "NEXTGEN iOS CI"
+          git config user.email "nextgen-ios-ci@users.noreply.github.com"
+          git add README.md source.json icon.png releases/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Publish NEXTGEN Monitor $(cat dist/version.txt) build $(cat dist/build-version.txt)"
+          git push origin HEAD:main
