@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080b13">
+<title>NEXTGEN Monitor — Web Preview</title>
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">WEB PREVIEW · DEMO DATA</div>
+      <h1>NEXTGEN Monitor</h1>
+    </div>
+    <button class="icon-btn" aria-label="Settings">⚙︎</button>
+  </header>
+
+  <main id="content">
+    <section class="screen active" data-screen="overview">
+      <div class="card connection">
+        <div class="pills">
+          <span class="pill ok"><i></i>API ONLINE</span>
+          <span class="pill ok"><i></i>AGENT ONLINE</span>
+          <span class="pill ok"><i></i>PAPER MODE</span>
+        </div>
+        <div class="muted small">Last API refresh: just now · Demo state</div>
+      </div>
+      <div class="grid two hero">
+        <div class="metric"><span>EQUITY</span><strong>$10,284.36</strong><small>Cash $8,914.20</small></div>
+        <div class="metric"><span>TOTAL PNL</span><strong class="positive">+$284.36</strong><small class="positive">+2.84%</small></div>
+      </div>
+
+      <div class="grid two">
+        <div class="metric"><span>STRATEGY</span><strong>MACD</strong><small>TRENDING</small></div>
+        <div class="metric"><span>HEARTBEAT</span><strong>2s ago</strong><small>HEALTHY</small></div>
+        <div class="metric"><span>DRAWDOWN</span><strong>-1.27%</strong><small>7 bars</small></div>
+        <div class="metric"><span>PRESSURE</span><strong>0.318</strong><small>Switches 12</small></div>
+      </div>
+
+      <div class="card controls">
+        <button id="statusBtn">↻ STATUS</button>
+        <button id="pauseBtn" class="warn">Ⅱ PAUSE</button>
+      </div>
+
+      <div class="card">
+        <div class="section-title">ADAPTIVE STRATEGIES</div>
+        <div class="grid two strategy-grid">
+          <div class="strategy"><span>RSI</span><small>mean-revert</small></div>
+          <div class="strategy"><span>MOVING AVG</span><small>trend</small></div>
+          <div class="strategy active-strategy"><span>MACD</span><small>ACTIVE</small></div>
+          <div class="strategy"><span>COMBO</span><small>hybrid</small></div>
+        </div>
+      </div>
+      <div class="card list-card">
+        <div class="section-title">CONTROLLER</div>
+        <div class="row"><span>Market regime</span><b>TRENDING</b></div>
+        <div class="row"><span>Loss streak</span><b>1</b></div>
+        <div class="row"><span>Dwell bars</span><b>18</b></div>
+        <div class="row"><span>Pressure</span><b>0.3184</b></div>
+        <div class="row"><span>Switch count</span><b>12</b></div>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="switches">
+      <div class="headline-card"><span>STRATEGY SWITCH HISTORY</span><strong>12 switches</strong></div>
+      <div class="card timeline">
+        <div class="event"><i></i><div><b>RSI → MACD</b><small>Pressure crossed learned boundary · 3m ago</small></div></div>
+        <div class="event"><i></i><div><b>COMBO → RSI</b><small>Loss streak recovered · 42m ago</small></div></div>
+        <div class="event"><i></i><div><b>MACD → COMBO</b><small>Regime changed to mixed · 1h 18m ago</small></div></div>
+        <div class="event"><i></i><div><b>MOVING AVG → MACD</b><small>Trend persistence improved · 2h 06m ago</small></div></div>
+      </div>
+      <div class="card detail">
+        <div class="section-title">WHY DID THE BOT SWITCH?</div>
+        <p>Adaptive controller detected rising strategy pressure after a short drawdown and selected the strongest currently eligible policy without using future bars.</p>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="decisions">
+      <div class="headline-card"><span>DECISION JOURNAL</span><strong>Closed-bar only</strong></div>
+      <div class="card journal">
+        <div class="decision"><time>15:48:00</time><b>LONG</b><span>MACD · score 0.71</span></div>
+        <div class="decision"><time>15:47:00</time><b class="flat">FLAT</b><span>MACD · score 0.44</span></div>
+        <div class="decision"><time>15:46:00</time><b class="short">SHORT</b><span>RSI · score 0.67</span></div>
+        <div class="decision"><time>15:45:00</time><b class="flat">FLAT</b><span>RSI · score 0.39</span></div>
+      </div>
+    </section>
+    <section class="screen" data-screen="chart">
+      <div class="headline-card"><span>PERFORMANCE</span><strong>Equity · 1D</strong></div>
+      <div class="card chart-card">
+        <div class="chart-top"><b>$10,284.36</b><span class="positive">+2.84%</span></div>
+        <svg viewBox="0 0 360 180" role="img" aria-label="Demo equity chart">
+          <defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f8cff" stop-opacity=".35"/><stop offset="1" stop-color="#4f8cff" stop-opacity="0"/></linearGradient></defs>
+          <path class="area" d="M0 145 C25 138 35 142 55 126 S92 132 112 104 S150 112 171 86 S210 97 231 68 S274 75 298 48 S334 52 360 30 L360 180 L0 180 Z"/>
+          <path class="line" d="M0 145 C25 138 35 142 55 126 S92 132 112 104 S150 112 171 86 S210 97 231 68 S274 75 298 48 S334 52 360 30"/>
+        </svg>
+        <div class="range"><button>1H</button><button>6H</button><button class="selected">1D</button><button>1W</button><button>ALL</button></div>
+      </div>
+      <div class="grid two">
+        <div class="metric"><span>MAX DD</span><strong>-2.18%</strong><small>today</small></div>
+        <div class="metric"><span>TRADES</span><strong>28</strong><small>paper fills</small></div>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="activity">
+      <div class="headline-card"><span>ACTIVITY</span><strong>Live timeline</strong></div>
+      <div class="card timeline">
+        <div class="event green"><i></i><div><b>Heartbeat healthy</b><small>2 seconds ago</small></div></div>
+        <div class="event blue"><i></i><div><b>Decision: LONG</b><small>MACD · BTCUSDT · 15:48</small></div></div>
+        <div class="event orange"><i></i><div><b>Strategy switched</b><small>RSI → MACD · 15:45</small></div></div>
+        <div class="event green"><i></i><div><b>Paper fill recorded</b><small>Accounting reconciled · 15:44</small></div></div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabbar">
+    <button class="tab active" data-target="overview"><span>◉</span><small>Overview</small></button>
+    <button class="tab" data-target="switches"><span>↻</span><small>Switches</small></button>
+    <button class="tab" data-target="decisions"><span>▤</span><small>Decisions</small></button>
+    <button class="tab" data-target="chart"><span>⌁</span><small>Chart</small></button>
+    <button class="tab" data-target="activity"><span>∿</span><small>Activity</small></button>
+  </nav>
+</div>
+<div id="toast">Demo preview only</div>
+<script src="app.js"></script>
+</body>
+</html>
