@@ -1,0 +1,38 @@
+{
+  "name": "NEXTGEN Monitor",
+  "identifier": "com.nextgen.monitor.source",
+  "subtitle": "Official unsigned builds for SideStore/AltStore",
+  "description": "Unsigned native iOS builds generated from the private NEXTGEN source. Your own Apple Account signs them on-device.",
+  "website": "https://github.com/Allower1/nextgen-monitor-dist",
+  "iconURL": "https://raw.githubusercontent.com/Allower1/nextgen-monitor-dist/main/icon.png",
+  "apps": [
+    {
+      "name": "NEXTGEN Monitor",
+      "bundleIdentifier": "com.nextgen.monitor",
+      "developerName": "NEXTGEN",
+      "subtitle": "Native paper-trading monitor",
+      "localizedDescription": "Native SwiftUI monitor for the NEXTGEN adaptive paper-trading runtime. Shows status, strategy changes, decisions, portfolio, fills and charts; safe controls are limited to status, pause and resume.",
+      "iconURL": "https://raw.githubusercontent.com/Allower1/nextgen-monitor-dist/main/icon.png",
+      "tintColor": "#2563EB",
+      "category": "utilities",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "buildVersion": "5",
+          "date": "2026-09-19T13:31:34Z",
+          "downloadURL": "https://raw.githubusercontent.com/Allower1/nextgen-monitor-dist/main/releases/NEXTGENMonitor-1.0.0-5.ipa",
+          "size": 414690,
+          "minOSVersion": "17.0",
+          "localizedDescription": "Native SwiftUI NEXTGEN Monitor build. Unsigned IPA SHA-256: 8b404fa87722ae58f45e7748884e90dc71d4a34380dc84ec2cf6681f1f3d9a1c"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "NEXTGEN Monitor connects to your private NEXTGEN paper-trading monitor API."
+        }
+      }
+    }
+  ],
+  "news": []
+}
