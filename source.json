@@ -18,6 +18,15 @@
       "versions": [
         {
           "version": "1.0.0",
+          "buildVersion": "1001",
+          "date": "2026-09-19T13:46:45Z",
+          "downloadURL": "https://raw.githubusercontent.com/Allower1/nextgen-monitor-dist/main/releases/NEXTGENMonitor-1.0.0-1001.ipa",
+          "size": 414717,
+          "minOSVersion": "17.0",
+          "localizedDescription": "Native SwiftUI NEXTGEN Monitor build. Unsigned IPA SHA-256: 3d2cd43ebd0d47a12505573e026f248925cb6677899deb13757fa1457db091d0"
+        },
+        {
+          "version": "1.0.0",
           "buildVersion": "6",
           "date": "2026-09-19T13:35:31Z",
           "downloadURL": "https://raw.githubusercontent.com/Allower1/nextgen-monitor-dist/main/releases/NEXTGENMonitor-1.0.0-6.ipa",
