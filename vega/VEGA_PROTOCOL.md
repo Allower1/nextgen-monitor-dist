@@ -170,3 +170,18 @@ or > 60 trades in any 24 h window, or 3 process crashes in 24 h. Checkpoints at 
 
 ## 12. Honest expectation
 The most likely outcome is **PROMOTE NONE**. That is a valid scientific result.
+
+---------------------------------------------------------------------------------------------
+## AMENDMENT A1 (2026-09-27, user instruction, before any holdout access; more conservative only)
+
+1. **2025 is NOT a pristine/independent holdout.** It was partially observed by earlier Nova/Evo
+   research. The 2025 "inner validation" is renamed **secondary contaminated stress test**. G14 stays
+   a *necessary* filter (a candidate failing it is retired), but passing it is NOT evidence of an
+   independent edge and must never be reported as such.
+   The ONLY untouched final holdout is **2026-01-01 00:00 UTC → 2026-09-20 00:00 UTC**, opened only
+   after HOLDOUT READY + frozen candidate/code/config/gates/hashes + explicit human UNLOCK.
+2. **Funding = actual historical funding events only**: real settlement timestamp (`calc_time`),
+   real rate (`last_funding_rate`), per specific symbol/instrument segment, applied only to positions
+   open at that timestamp and only with information available at that moment. No fixed 8-hour grid
+   is ever assumed. (The only synthetic events are the conservative "missing record" fills of §5,
+   which always charge the position.) Funding PnL is part of every candidate's net PnL.

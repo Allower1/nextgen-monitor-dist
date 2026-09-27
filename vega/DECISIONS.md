@@ -69,3 +69,10 @@ trials (they are not candidate configurations).
 
 D-017 ridge_wf fitting uses cumulative training moments over the purged expanding window (exactly
 equivalent to refitting ridge on each window; training rows subsampled every 3rd 5m step).
+
+D-018 AMENDMENT A1 (user, 2026-09-27): 2025 = secondary contaminated stress test, not independent
+evidence; the only true untouched holdout is 2026-01-01 → 2026-09-20 (locked). Funding must use
+actual historical events (timestamp, rate, symbol) causally — already how the engine works
+(`universe.load_funding` → `f_time/f_rate` per instrument; `backtest.run_engine` step C charges
+events in (bar_open, bar_close] for open positions, price = last close). Recorded in
+VEGA_PROTOCOL.md §A1; PROTOCOL_MANIFEST.json regenerated (kernel unchanged).

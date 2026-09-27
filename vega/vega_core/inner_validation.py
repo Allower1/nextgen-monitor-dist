@@ -1,4 +1,4 @@
-"""INNER VALIDATION 2025 (G14). Limited: ≤ 3 sessions × ≤ 10 frozen candidates, all logged.
+"""SECONDARY CONTAMINATED STRESS TEST 2025 (G14; NOT independent evidence, amendment A1). Limited: ≤ 3 sessions × ≤ 10 frozen candidates, all logged.
 
 Candidates must already have passed every evolution-zone gate (results/promotion_report.json).
 A candidate evaluated here can never be modified; failures are retired permanently.

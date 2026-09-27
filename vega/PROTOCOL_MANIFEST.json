@@ -4,6 +4,14 @@
   "kernel_version": "1.0.0",
   "files": {
     "vega_core/kernel.py": "1b2c839d9d15a0fa6fe85c57d019a6574c12119d1618d61e9278c9078b639856",
-    "VEGA_PROTOCOL.md": "3a32ef559ca0d87e7937735ceb3f447911e1645d189b4e3b203ea12d3454cea7"
-  }
+    "VEGA_PROTOCOL.md": "315e64074365d19aabaeb9c4f50ff55dc8f9f8ecb0a2ca0c4b8d961ed2cdfd71"
+  },
+  "amendments": [
+    {
+      "id": "A1",
+      "date": "2026-09-27",
+      "note": "2025 contaminated; funding actual events; kernel unchanged",
+      "previous_protocol_sha256": "3a32ef559ca0d87e7937735ceb3f447911e1645d189b4e3b203ea12d3454cea7"
+    }
+  ]
 }

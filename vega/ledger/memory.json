@@ -1,122 +1,122 @@
 {
  "run_id": "R1",
- "gen": 1,
+ "gen": 11,
  "family_best": {
-  "momentum_breakout": -2.4901163849147703,
-  "mean_reversion": -2.8634637958441336,
-  "vol_expansion": -2.270446504894302,
-  "xs_momentum": -1.4789725740219757,
-  "opportunity": -2.9343070314220556,
-  "flow_imbalance": -2.039487792873748,
-  "ridge_wf": -1.9000781020911508
+  "momentum_breakout": -1.1204265202584875,
+  "mean_reversion": -1.0878890660988516,
+  "vol_expansion": -1.0251071982113777,
+  "xs_momentum": -1.3033226070236215,
+  "opportunity": -1.430104265227643,
+  "flow_imbalance": -0.6092799376708058,
+  "ridge_wf": -0.5270710080242493
  },
  "family_stale": {
-  "momentum_breakout": 0,
-  "mean_reversion": 0,
+  "momentum_breakout": 7,
+  "mean_reversion": 4,
   "vol_expansion": 0,
-  "xs_momentum": 0,
-  "opportunity": 0,
-  "flow_imbalance": 0,
-  "ridge_wf": 0
+  "xs_momentum": 1,
+  "opportunity": 2,
+  "flow_imbalance": 2,
+  "ridge_wf": 1
  },
  "n_promotion_queue": 0,
  "top": {
   "momentum_breakout": [
    [
-    "ec7659f20c5aebb9",
-    -2.49
+    "f8f283d69a30d2ec",
+    -1.12
    ],
    [
-    "20be852a72cd3eca",
-    -3.095
+    "167af24d377aba1c",
+    -1.153
    ],
    [
-    "c3528601f538acdf",
-    -3.625
+    "e303cbd4209f671b",
+    -1.169
    ]
   ],
   "mean_reversion": [
    [
-    "d8708597d7ed3c99",
-    -2.863
+    "008c2a9beca13bcd",
+    -1.088
    ],
    [
-    "a0cef17bd8dc3267",
-    -3.089
+    "a0a9ca55e842e9cb",
+    -1.094
    ],
    [
-    "9a50ea470d29f4e9",
-    -3.121
+    "bf8542e854b65c2f",
+    -1.18
    ]
   ],
   "vol_expansion": [
    [
-    "ae59d2b3c1cbdb0f",
-    -2.27
+    "c22751302f81ff24",
+    -1.025
    ],
    [
-    "f335daa869e31922",
-    -2.755
+    "57afafe6cde85a0f",
+    -1.216
    ],
    [
-    "8061e7e4f0e95bf3",
-    -3.355
+    "439aef807aea8732",
+    -1.728
    ]
   ],
   "xs_momentum": [
    [
+    "b28fc9eeb848baa6",
+    -1.303
+   ],
+   [
+    "046f3c285cac1bf7",
+    -1.35
+   ],
+   [
     "6688dee369f59b23",
     -1.479
-   ],
-   [
-    "59387023ebc8182c",
-    -3.32
-   ],
-   [
-    "abab8bd129c01def",
-    -3.356
    ]
   ],
   "opportunity": [
    [
-    "d858aaa7fe28f3ba",
-    -2.934
+    "165cc3419ed73c76",
+    -1.43
    ],
    [
-    "1986c1fbed8eb572",
-    -3.058
+    "3fe349f65c939a1b",
+    -1.598
    ],
    [
-    "10b117b43d1fc4e2",
-    -3.069
+    "72f0bc360b1f6fe6",
+    -1.598
    ]
   ],
   "flow_imbalance": [
    [
-    "39f6605c3fd64ec1",
-    -2.039
+    "065ca8aae1e6f317",
+    -0.609
    ],
    [
-    "d947261f8c133378",
-    -2.544
+    "9f89c0dd374b7973",
+    -0.85
    ],
    [
-    "767ef3c1758d8f11",
-    -2.813
+    "7da96bd963bfa9c5",
+    -0.935
    ]
   ],
   "ridge_wf": [
    [
-    "305941b4df729ea4",
-    -1.9
+    "ea291615c9b6e7ad",
+    -0.527
    ],
    [
-    "455405bda4b6e32d",
-    -2.678
+    "9bf64b588200cd03",
+    -0.696
    ],
    [
-    "ac1d01f863941644",
-    -2.735
+    "aa5158cd867c0e22",
+    -0.719
    ]
   ]
  }
