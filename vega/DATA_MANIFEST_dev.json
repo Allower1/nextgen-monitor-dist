@@ -1,0 +1,7222 @@
+{
+ "schema_version": "vega-data-1",
+ "zone": "dev",
+ "created_utc": "2026-09-27T07:36:20Z",
+ "timezone": "UTC (all timestamps ms since epoch, bar usable at close_time = open_time + interval)",
+ "source": "https://data.binance.vision/data/futures/um/monthly/{klines/<SYM>/1m,fundingRate/<SYM>}",
+ "archive_listing_created": "2026-09-27T07:04:59Z",
+ "archive_max_month": "2025-12",
+ "n_archive_symbols_total": 638,
+ "files": {
+  "klines_1m_ok": 9706,
+  "funding_ok": 9693,
+  "status_counts": {
+   "ok": 19399
+  },
+  "bytes_zip_klines": 13795037238,
+  "rows_klines": 416033480
+ },
+ "combined_sha256_of_zip_hashes": "2c055c852a1106e71bc740772c50962702cb53fa6ab7cf1c15d2c12c3075949c",
+ "checksum_policy": "Binance .CHECKSUM (sha256) verified per file; own sha256 of zip and parquet stored per file in data/meta/download_manifest.jsonl",
+ "audit_totals": {
+  "rows_raw": 421101335,
+  "duplicates": 0,
+  "misaligned": 0,
+  "bad_ohlc": 0,
+  "zero_trade_flat": 18223940,
+  "rows_clean": 402877395
+ },
+ "n_instruments": 399,
+ "data_availability": {
+  "klines_1m": "2020-01 \u2192 2025-12 (USDT-M perps, all archive symbols incl. delisted)",
+  "funding": "full history per symbol (8h or symbol-specific interval_h)",
+  "open_interest_long_short": "archive metrics only from ~2020-09 (BTC) / late 2021 for most \u2192 NOT USED",
+  "bid_ask_spread_1m": "not available historically \u2192 slippage proxy (VEGA_PROTOCOL \u00a76)",
+  "liquidations": "incomplete \u2192 NOT USED",
+  "holdout_2026": "NOT downloaded, NOT listed"
+ },
+ "instruments": [
+  {
+   "inst": "1000000MOGUSDT",
+   "symbol": "1000000MOGUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-07 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 78450,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 78450
+   }
+  },
+  {
+   "inst": "1000BONKUSDT",
+   "symbol": "1000BONKUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-22 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99984,
+   "missing_1m": 91,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 583800,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 91,
+    "rows_clean": 583709
+   }
+  },
+  {
+   "inst": "1000BTTCUSDT",
+   "symbol": "1000BTTCUSDT",
+   "segment": 1,
+   "listing_utc": "2022-01-26 03:30",
+   "last_bar_utc": "2022-04-11 08:59",
+   "coverage": 0.98354,
+   "missing_1m": 1783,
+   "max_gap_min": 5,
+   "audit": {
+    "rows_raw": 108331,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1784,
+    "rows_clean": 106547
+   }
+  },
+  {
+   "inst": "1000CATUSDT",
+   "symbol": "1000CATUSDT",
+   "segment": 1,
+   "listing_utc": "2024-10-21 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99914,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 102930,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 102841
+   }
+  },
+  {
+   "inst": "1000CHEEMSUSDT",
+   "symbol": "1000CHEEMSUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-25 11:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9999,
+   "missing_1m": 5,
+   "max_gap_min": 2,
+   "audit": {
+    "rows_raw": 52575,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5,
+    "rows_clean": 52570
+   }
+  },
+  {
+   "inst": "1000FLOKIUSDT",
+   "symbol": "1000FLOKIUSDT",
+   "segment": 1,
+   "listing_utc": "2023-05-06 16:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99598,
+   "missing_1m": 3500,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 871650,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3500,
+    "rows_clean": 868150
+   }
+  },
+  {
+   "inst": "1000LUNCUSDT",
+   "symbol": "1000LUNCUSDT",
+   "segment": 1,
+   "listing_utc": "2022-09-09 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99952,
+   "missing_1m": 587,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1216020,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 587,
+    "rows_clean": 1215433
+   }
+  },
+  {
+   "inst": "1000PEPEUSDT",
+   "symbol": "1000PEPEUSDT",
+   "segment": 1,
+   "listing_utc": "2023-05-05 16:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99987,
+   "missing_1m": 111,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 873090,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 111,
+    "rows_clean": 872979
+   }
+  },
+  {
+   "inst": "1000RATSUSDT",
+   "symbol": "1000RATSUSDT",
+   "segment": 1,
+   "listing_utc": "2023-12-15 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99984,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 550680,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 550591
+   }
+  },
+  {
+   "inst": "1000SATSUSDT",
+   "symbol": "1000SATSUSDT",
+   "segment": 1,
+   "listing_utc": "2023-12-12 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99984,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 555000,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 554911
+   }
+  },
+  {
+   "inst": "1000SHIBUSDT",
+   "symbol": "1000SHIBUSDT",
+   "segment": 1,
+   "listing_utc": "2021-05-10 17:37",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9999,
+   "missing_1m": 186,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1917023,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 184,
+    "rows_clean": 1916839
+   }
+  },
+  {
+   "inst": "1000WHYUSDT",
+   "symbol": "1000WHYUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-25 11:31",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99901,
+   "missing_1m": 52,
+   "max_gap_min": 3,
+   "audit": {
+    "rows_raw": 52589,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 51,
+    "rows_clean": 52538
+   }
+  },
+  {
+   "inst": "1000XECUSDT",
+   "symbol": "1000XECUSDT",
+   "segment": 1,
+   "listing_utc": "2021-09-17 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99146,
+   "missing_1m": 14782,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1730670,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 14782,
+    "rows_clean": 1715888
+   }
+  },
+  {
+   "inst": "1000XUSDT",
+   "symbol": "1000XUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-13 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 69810,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 69810
+   }
+  },
+  {
+   "inst": "1INCHUSDT",
+   "symbol": "1INCHUSDT",
+   "segment": 1,
+   "listing_utc": "2020-12-25 10:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99896,
+   "missing_1m": 2204,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2113320,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2204,
+    "rows_clean": 2111116
+   }
+  },
+  {
+   "inst": "1MBABYDOGEUSDT",
+   "symbol": "1MBABYDOGEUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-16 11:35",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99942,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 153385,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 153296
+   }
+  },
+  {
+   "inst": "AAVEUSDT",
+   "symbol": "AAVEUSDT",
+   "segment": 1,
+   "listing_utc": "2020-10-16 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99969,
+   "missing_1m": 692,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2214300,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 692,
+    "rows_clean": 2213608
+   }
+  },
+  {
+   "inst": "ACEUSDT",
+   "symbol": "ACEUSDT",
+   "segment": 1,
+   "listing_utc": "2023-12-18 10:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99979,
+   "missing_1m": 115,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 546600,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 115,
+    "rows_clean": 546485
+   }
+  },
+  {
+   "inst": "ACHUSDT",
+   "symbol": "ACHUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-22 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99635,
+   "missing_1m": 3563,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 976890,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3563,
+    "rows_clean": 973327
+   }
+  },
+  {
+   "inst": "ACTUSDT",
+   "symbol": "ACTUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-11 12:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 72705,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 72705
+   }
+  },
+  {
+   "inst": "ACXUSDT",
+   "symbol": "ACXUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-06 15:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 36540,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 36540
+   }
+  },
+  {
+   "inst": "ADAUSDT",
+   "symbol": "ADAUSDT",
+   "segment": 1,
+   "listing_utc": "2020-01-31 08:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99736,
+   "missing_1m": 6828,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2587199,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 6827,
+    "rows_clean": 2580372
+   }
+  },
+  {
+   "inst": "AERGOUSDT",
+   "symbol": "AERGOUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-10 12:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98052,
+   "missing_1m": 3156,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 161985,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3156,
+    "rows_clean": 158829
+   }
+  },
+  {
+   "inst": "AEROUSDT",
+   "symbol": "AEROUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-04 14:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99927,
+   "missing_1m": 29,
+   "max_gap_min": 4,
+   "audit": {
+    "rows_raw": 39465,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 29,
+    "rows_clean": 39436
+   }
+  },
+  {
+   "inst": "AEVOUSDT",
+   "symbol": "AEVOUSDT",
+   "segment": 1,
+   "listing_utc": "2024-03-13 13:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99975,
+   "missing_1m": 106,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 422550,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 106,
+    "rows_clean": 422444
+   }
+  },
+  {
+   "inst": "AGIXUSDT",
+   "symbol": "AGIXUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-16 14:15",
+   "last_bar_utc": "2024-06-25 09:00",
+   "coverage": 0.99848,
+   "missing_1m": 1086,
+   "max_gap_min": 20,
+   "audit": {
+    "rows_raw": 985545,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 274141,
+    "rows_clean": 711404
+   }
+  },
+  {
+   "inst": "AGLDUSDT",
+   "symbol": "AGLDUSDT",
+   "segment": 1,
+   "listing_utc": "2023-07-29 02:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99717,
+   "missing_1m": 2125,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 751530,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2125,
+    "rows_clean": 749405
+   }
+  },
+  {
+   "inst": "AIUSDT",
+   "symbol": "AIUSDT",
+   "segment": 1,
+   "listing_utc": "2024-01-08 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99981,
+   "missing_1m": 97,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 516210,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 97,
+    "rows_clean": 516113
+   }
+  },
+  {
+   "inst": "AIXBTUSDT",
+   "symbol": "AIXBTUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-20 18:31",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99994,
+   "missing_1m": 1,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 16169,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 16169
+   }
+  },
+  {
+   "inst": "AKROUSDT",
+   "symbol": "AKROUSDT",
+   "segment": 1,
+   "listing_utc": "2021-01-19 07:00",
+   "last_bar_utc": "2022-05-27 06:59",
+   "coverage": 0.99819,
+   "missing_1m": 1284,
+   "max_gap_min": 60,
+   "audit": {
+    "rows_raw": 710057,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1421,
+    "rows_clean": 708636
+   }
+  },
+  {
+   "inst": "AKTUSDT",
+   "symbol": "AKTUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-18 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99914,
+   "missing_1m": 54,
+   "max_gap_min": 3,
+   "audit": {
+    "rows_raw": 62670,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 54,
+    "rows_clean": 62616
+   }
+  },
+  {
+   "inst": "ALGOUSDT",
+   "symbol": "ALGOUSDT",
+   "segment": 1,
+   "listing_utc": "2020-06-16 09:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99664,
+   "missing_1m": 8035,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2389859,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 8034,
+    "rows_clean": 2381825
+   }
+  },
+  {
+   "inst": "ALICEUSDT",
+   "symbol": "ALICEUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-16 03:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99542,
+   "missing_1m": 9146,
+   "max_gap_min": 77,
+   "audit": {
+    "rows_raw": 1997100,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 9146,
+    "rows_clean": 1987954
+   }
+  },
+  {
+   "inst": "ALPACAUSDT",
+   "symbol": "ALPACAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-22 10:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99929,
+   "missing_1m": 134,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 189450,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 134,
+    "rows_clean": 189316
+   }
+  },
+  {
+   "inst": "ALPHAUSDT",
+   "symbol": "ALPHAUSDT",
+   "segment": 1,
+   "listing_utc": "2020-11-23 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9986,
+   "missing_1m": 3022,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2159580,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3022,
+    "rows_clean": 2156558
+   }
+  },
+  {
+   "inst": "ALTUSDT",
+   "symbol": "ALTUSDT",
+   "segment": 1,
+   "listing_utc": "2024-01-25 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99981,
+   "missing_1m": 91,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 491640,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 91,
+    "rows_clean": 491549
+   }
+  },
+  {
+   "inst": "AMBUSDT",
+   "symbol": "AMBUSDT",
+   "segment": 1,
+   "listing_utc": "2023-03-30 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99458,
+   "missing_1m": 5015,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 925200,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5015,
+    "rows_clean": 920185
+   }
+  },
+  {
+   "inst": "ANCUSDT",
+   "symbol": "ANCUSDT",
+   "segment": 1,
+   "listing_utc": "2022-03-08 03:30",
+   "last_bar_utc": "2022-05-13 04:00",
+   "coverage": 0.9982,
+   "missing_1m": 171,
+   "max_gap_min": 30,
+   "audit": {
+    "rows_raw": 95231,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 327,
+    "rows_clean": 94904
+   }
+  },
+  {
+   "inst": "ANKRUSDT",
+   "symbol": "ANKRUSDT",
+   "segment": 1,
+   "listing_utc": "2021-01-26 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99664,
+   "missing_1m": 6954,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2067420,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 6954,
+    "rows_clean": 2060466
+   }
+  },
+  {
+   "inst": "ANTUSDT",
+   "symbol": "ANTUSDT",
+   "segment": 1,
+   "listing_utc": "2021-12-27 04:01",
+   "last_bar_utc": "2024-04-01 08:59",
+   "coverage": 0.99618,
+   "missing_1m": 4541,
+   "max_gap_min": 36,
+   "audit": {
+    "rows_raw": 1271708,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 86509,
+    "rows_clean": 1185199
+   }
+  },
+  {
+   "inst": "APEUSDT",
+   "symbol": "APEUSDT",
+   "segment": 1,
+   "listing_utc": "2022-03-17 15:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99986,
+   "missing_1m": 202,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1469340,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 202,
+    "rows_clean": 1469138
+   }
+  },
+  {
+   "inst": "API3USDT",
+   "symbol": "API3USDT",
+   "segment": 1,
+   "listing_utc": "2022-02-22 03:31",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99404,
+   "missing_1m": 8961,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1503149,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 8960,
+    "rows_clean": 1494189
+   }
+  },
+  {
+   "inst": "APTUSDT",
+   "symbol": "APTUSDT",
+   "segment": 1,
+   "listing_utc": "2022-10-19 02:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99988,
+   "missing_1m": 142,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1159080,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 142,
+    "rows_clean": 1158938
+   }
+  },
+  {
+   "inst": "ARBUSDT",
+   "symbol": "ARBUSDT",
+   "segment": 1,
+   "listing_utc": "2023-03-23 15:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99988,
+   "missing_1m": 115,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 935099,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 114,
+    "rows_clean": 934985
+   }
+  },
+  {
+   "inst": "ARKMUSDT",
+   "symbol": "ARKMUSDT",
+   "segment": 1,
+   "listing_utc": "2023-07-28 02:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99935,
+   "missing_1m": 491,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 752955,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 491,
+    "rows_clean": 752464
+   }
+  },
+  {
+   "inst": "ARKUSDT",
+   "symbol": "ARKUSDT",
+   "segment": 1,
+   "listing_utc": "2023-09-19 16:03",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9987,
+   "missing_1m": 877,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 675837,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 874,
+    "rows_clean": 674963
+   }
+  },
+  {
+   "inst": "ARPAUSDT",
+   "symbol": "ARPAUSDT",
+   "segment": 1,
+   "listing_utc": "2021-10-19 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99607,
+   "missing_1m": 6619,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1684590,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 6619,
+    "rows_clean": 1677971
+   }
+  },
+  {
+   "inst": "ARUSDT",
+   "symbol": "ARUSDT",
+   "segment": 1,
+   "listing_utc": "2021-09-28 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99898,
+   "missing_1m": 1742,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1714830,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1742,
+    "rows_clean": 1713088
+   }
+  },
+  {
+   "inst": "ASTRUSDT",
+   "symbol": "ASTRUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-14 02:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99702,
+   "missing_1m": 2943,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 989130,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2943,
+    "rows_clean": 986187
+   }
+  },
+  {
+   "inst": "ATAUSDT",
+   "symbol": "ATAUSDT",
+   "segment": 1,
+   "listing_utc": "2021-08-31 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98971,
+   "missing_1m": 18066,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 1755150,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 18066,
+    "rows_clean": 1737084
+   }
+  },
+  {
+   "inst": "ATOMUSDT",
+   "symbol": "ATOMUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-07 12:11",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99234,
+   "missing_1m": 19743,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2576869,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 19742,
+    "rows_clean": 2557127
+   }
+  },
+  {
+   "inst": "AUCTIONUSDT",
+   "symbol": "AUCTIONUSDT",
+   "segment": 1,
+   "listing_utc": "2023-12-15 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99946,
+   "missing_1m": 296,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 550740,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 296,
+    "rows_clean": 550444
+   }
+  },
+  {
+   "inst": "AUDIOUSDT",
+   "symbol": "AUDIOUSDT",
+   "segment": 1,
+   "listing_utc": "2021-08-19 03:30",
+   "last_bar_utc": "2024-05-16 09:00",
+   "coverage": 0.99442,
+   "missing_1m": 8050,
+   "max_gap_min": 36,
+   "audit": {
+    "rows_raw": 1458948,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 25223,
+    "rows_clean": 1433725
+   }
+  },
+  {
+   "inst": "AVAUSDT",
+   "symbol": "AVAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-13 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 26580,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 26580
+   }
+  },
+  {
+   "inst": "AVAXUSDT",
+   "symbol": "AVAXUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-23 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99976,
+   "missing_1m": 532,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2247420,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 532,
+    "rows_clean": 2246888
+   }
+  },
+  {
+   "inst": "AXLUSDT",
+   "symbol": "AXLUSDT",
+   "segment": 1,
+   "listing_utc": "2024-03-01 15:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99946,
+   "missing_1m": 238,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 439710,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 238,
+    "rows_clean": 439472
+   }
+  },
+  {
+   "inst": "AXSUSDT",
+   "symbol": "AXSUSDT",
+   "segment": 1,
+   "listing_utc": "2020-11-20 07:04",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99965,
+   "missing_1m": 752,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2163896,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 748,
+    "rows_clean": 2163148
+   }
+  },
+  {
+   "inst": "BADGERUSDT",
+   "symbol": "BADGERUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-09 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99625,
+   "missing_1m": 2258,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 602610,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2258,
+    "rows_clean": 600352
+   }
+  },
+  {
+   "inst": "BAKEUSDT",
+   "symbol": "BAKEUSDT",
+   "segment": 1,
+   "listing_utc": "2021-05-19 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99745,
+   "missing_1m": 4851,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1904700,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4851,
+    "rows_clean": 1899849
+   }
+  },
+  {
+   "inst": "BALUSDT",
+   "symbol": "BALUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-01 07:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9952,
+   "missing_1m": 10936,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2279099,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 10935,
+    "rows_clean": 2268164
+   }
+  },
+  {
+   "inst": "BANANAUSDT",
+   "symbol": "BANANAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-15 02:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99953,
+   "missing_1m": 95,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 200040,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 95,
+    "rows_clean": 199945
+   }
+  },
+  {
+   "inst": "BANDUSDT",
+   "symbol": "BANDUSDT",
+   "segment": 1,
+   "listing_utc": "2020-07-29 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99948,
+   "missing_1m": 1215,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2328060,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1215,
+    "rows_clean": 2326845
+   }
+  },
+  {
+   "inst": "BANUSDT",
+   "symbol": "BANUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-18 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 62670,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 62670
+   }
+  },
+  {
+   "inst": "BATUSDT",
+   "symbol": "BATUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-13 08:05",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99526,
+   "missing_1m": 12166,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2568475,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 12166,
+    "rows_clean": 2556309
+   }
+  },
+  {
+   "inst": "BBUSDT",
+   "symbol": "BBUSDT",
+   "segment": 1,
+   "listing_utc": "2024-05-13 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9997,
+   "missing_1m": 99,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 334770,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 99,
+    "rows_clean": 334671
+   }
+  },
+  {
+   "inst": "BCHUSDT",
+   "symbol": "BCHUSDT",
+   "segment": 1,
+   "listing_utc": "2020-01-01 00:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99984,
+   "missing_1m": 412,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2630880,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 412,
+    "rows_clean": 2630468
+   }
+  },
+  {
+   "inst": "BEAMXUSDT",
+   "symbol": "BEAMXUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-17 13:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99952,
+   "missing_1m": 283,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 591030,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 283,
+    "rows_clean": 590747
+   }
+  },
+  {
+   "inst": "BELUSDT",
+   "symbol": "BELUSDT",
+   "segment": 1,
+   "listing_utc": "2020-11-18 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99872,
+   "missing_1m": 2763,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2166780,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2763,
+    "rows_clean": 2164017
+   }
+  },
+  {
+   "inst": "BICOUSDT",
+   "symbol": "BICOUSDT",
+   "segment": 1,
+   "listing_utc": "2023-09-28 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99138,
+   "missing_1m": 5715,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 663090,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5715,
+    "rows_clean": 657375
+   }
+  },
+  {
+   "inst": "BIGTIMEUSDT",
+   "symbol": "BIGTIMEUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-12 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99957,
+   "missing_1m": 278,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 642810,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 278,
+    "rows_clean": 642532
+   }
+  },
+  {
+   "inst": "BLUEBIRDUSDT",
+   "symbol": "BLUEBIRDUSDT",
+   "segment": 1,
+   "listing_utc": "2022-11-02 12:00",
+   "last_bar_utc": "2024-03-26 08:59",
+   "coverage": 0.95797,
+   "missing_1m": 30857,
+   "max_gap_min": 21,
+   "audit": {
+    "rows_raw": 824826,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 121463,
+    "rows_clean": 703363
+   }
+  },
+  {
+   "inst": "BLURUSDT",
+   "symbol": "BLURUSDT",
+   "segment": 1,
+   "listing_utc": "2023-04-28 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99706,
+   "missing_1m": 2599,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 883440,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2599,
+    "rows_clean": 880841
+   }
+  },
+  {
+   "inst": "BLZUSDT",
+   "symbol": "BLZUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-17 07:02",
+   "last_bar_utc": "2024-12-23 08:59",
+   "coverage": 0.99736,
+   "missing_1m": 5934,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2256058,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 18352,
+    "rows_clean": 2237706
+   }
+  },
+  {
+   "inst": "BNBUSDT",
+   "symbol": "BNBUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-10 08:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99965,
+   "missing_1m": 905,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2572799,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 904,
+    "rows_clean": 2571895
+   }
+  },
+  {
+   "inst": "BNTUSDT",
+   "symbol": "BNTUSDT",
+   "segment": 1,
+   "listing_utc": "2023-08-10 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99136,
+   "missing_1m": 6338,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 733680,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 6338,
+    "rows_clean": 727342
+   }
+  },
+  {
+   "inst": "BNXUSDT#1",
+   "symbol": "BNXUSDT",
+   "segment": 1,
+   "listing_utc": "2022-04-01 03:30",
+   "last_bar_utc": "2023-01-31 23:59",
+   "coverage": 0.98264,
+   "missing_1m": 7644,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1410105,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 8502,
+    "rows_clean": 1401603
+   }
+  },
+  {
+   "inst": "BNXUSDT#2",
+   "symbol": "BNXUSDT",
+   "segment": 2,
+   "listing_utc": "2023-02-22 14:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99175,
+   "missing_1m": 8058,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1410105,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 8502,
+    "rows_clean": 1401603
+   }
+  },
+  {
+   "inst": "BOMEUSDT",
+   "symbol": "BOMEUSDT",
+   "segment": 1,
+   "listing_utc": "2024-03-16 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99979,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 418290,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 418201
+   }
+  },
+  {
+   "inst": "BONDUSDT",
+   "symbol": "BONDUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-15 14:30",
+   "last_bar_utc": "2024-12-16 08:59",
+   "coverage": 0.99187,
+   "missing_1m": 5006,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 638490,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 27506,
+    "rows_clean": 610984
+   }
+  },
+  {
+   "inst": "BRETTUSDT",
+   "symbol": "BRETTUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-20 10:35",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99821,
+   "missing_1m": 345,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 192325,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 345,
+    "rows_clean": 191980
+   }
+  },
+  {
+   "inst": "BSVUSDT",
+   "symbol": "BSVUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-20 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99258,
+   "missing_1m": 4683,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 631410,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4683,
+    "rows_clean": 626727
+   }
+  },
+  {
+   "inst": "BSWUSDT",
+   "symbol": "BSWUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-05 06:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98796,
+   "missing_1m": 2042,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 169560,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2042,
+    "rows_clean": 167518
+   }
+  },
+  {
+   "inst": "BTCDOMUSDT",
+   "symbol": "BTCDOMUSDT",
+   "segment": 1,
+   "listing_utc": "2021-06-21 03:31",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.94315,
+   "missing_1m": 105595,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1857389,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 105594,
+    "rows_clean": 1751795
+   }
+  },
+  {
+   "inst": "BTCSTUSDT",
+   "symbol": "BTCSTUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-04 07:00",
+   "last_bar_utc": "2021-03-12 01:59",
+   "coverage": 0.99456,
+   "missing_1m": 61,
+   "max_gap_min": 9,
+   "audit": {
+    "rows_raw": 2014140,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2002981,
+    "rows_clean": 11159
+   }
+  },
+  {
+   "inst": "BTCUSDT",
+   "symbol": "BTCUSDT",
+   "segment": 1,
+   "listing_utc": "2020-01-01 00:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99987,
+   "missing_1m": 332,
+   "max_gap_min": 100,
+   "audit": {
+    "rows_raw": 2630880,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 332,
+    "rows_clean": 2630548
+   }
+  },
+  {
+   "inst": "BTSUSDT",
+   "symbol": "BTSUSDT",
+   "segment": 1,
+   "listing_utc": "2021-02-01 07:00",
+   "last_bar_utc": "2022-08-18 08:59",
+   "coverage": 0.99705,
+   "missing_1m": 2388,
+   "max_gap_min": 60,
+   "audit": {
+    "rows_raw": 1745290,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 936838,
+    "rows_clean": 808452
+   }
+  },
+  {
+   "inst": "BTTUSDT",
+   "symbol": "BTTUSDT",
+   "segment": 1,
+   "listing_utc": "2021-04-06 07:00",
+   "last_bar_utc": "2022-01-14 02:00",
+   "coverage": 0.99968,
+   "missing_1m": 132,
+   "max_gap_min": 3,
+   "audit": {
+    "rows_raw": 425075,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 17982,
+    "rows_clean": 407093
+   }
+  },
+  {
+   "inst": "BZRXUSDT",
+   "symbol": "BZRXUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-05 03:00",
+   "last_bar_utc": "2021-12-19 01:59",
+   "coverage": 0.99249,
+   "missing_1m": 5083,
+   "max_gap_min": 60,
+   "audit": {
+    "rows_raw": 676751,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5094,
+    "rows_clean": 671657
+   }
+  },
+  {
+   "inst": "C98USDT",
+   "symbol": "C98USDT",
+   "segment": 1,
+   "listing_utc": "2021-08-24 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99639,
+   "missing_1m": 6375,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1765230,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 6375,
+    "rows_clean": 1758855
+   }
+  },
+  {
+   "inst": "CAKEUSDT",
+   "symbol": "CAKEUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-02 12:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99903,
+   "missing_1m": 592,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 612675,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 592,
+    "rows_clean": 612083
+   }
+  },
+  {
+   "inst": "CATIUSDT",
+   "symbol": "CATIUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-20 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9994,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 147630,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 147541
+   }
+  },
+  {
+   "inst": "CELOUSDT",
+   "symbol": "CELOUSDT",
+   "segment": 1,
+   "listing_utc": "2021-09-27 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99595,
+   "missing_1m": 6947,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 1716270,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 6947,
+    "rows_clean": 1709323
+   }
+  },
+  {
+   "inst": "CELRUSDT",
+   "symbol": "CELRUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-29 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99486,
+   "missing_1m": 10164,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1978140,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 10164,
+    "rows_clean": 1967976
+   }
+  },
+  {
+   "inst": "CETUSUSDT",
+   "symbol": "CETUSUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-06 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 79800,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 79800
+   }
+  },
+  {
+   "inst": "CFXUSDT",
+   "symbol": "CFXUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-20 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99984,
+   "missing_1m": 156,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 979770,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 156,
+    "rows_clean": 979614
+   }
+  },
+  {
+   "inst": "CGPTUSDT",
+   "symbol": "CGPTUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-20 19:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99994,
+   "missing_1m": 1,
+   "max_gap_min": 2,
+   "audit": {
+    "rows_raw": 16125,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1,
+    "rows_clean": 16124
+   }
+  },
+  {
+   "inst": "CHESSUSDT",
+   "symbol": "CHESSUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-29 07:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98878,
+   "missing_1m": 2014,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 179550,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2014,
+    "rows_clean": 177536
+   }
+  },
+  {
+   "inst": "CHILLGUYUSDT",
+   "symbol": "CHILLGUYUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-27 14:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 49515,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 49515
+   }
+  },
+  {
+   "inst": "CHRUSDT",
+   "symbol": "CHRUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-12 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99454,
+   "missing_1m": 10938,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 2002620,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 10938,
+    "rows_clean": 1991682
+   }
+  },
+  {
+   "inst": "CHZUSDT",
+   "symbol": "CHZUSDT",
+   "segment": 1,
+   "listing_utc": "2021-01-21 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9992,
+   "missing_1m": 1659,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2074620,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1659,
+    "rows_clean": 2072961
+   }
+  },
+  {
+   "inst": "CKBUSDT",
+   "symbol": "CKBUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-28 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99217,
+   "missing_1m": 7586,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 968400,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 7586,
+    "rows_clean": 960814
+   }
+  },
+  {
+   "inst": "COCOSUSDT",
+   "symbol": "COCOSUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-21 14:45",
+   "last_bar_utc": "2023-05-25 09:00",
+   "coverage": 0.99951,
+   "missing_1m": 66,
+   "max_gap_min": 3,
+   "audit": {
+    "rows_raw": 664832,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 531318,
+    "rows_clean": 133514
+   }
+  },
+  {
+   "inst": "COMBOUSDT",
+   "symbol": "COMBOUSDT",
+   "segment": 1,
+   "listing_utc": "2023-06-02 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99332,
+   "missing_1m": 5562,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 833040,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5562,
+    "rows_clean": 827478
+   }
+  },
+  {
+   "inst": "COMPUSDT",
+   "symbol": "COMPUSDT",
+   "segment": 1,
+   "listing_utc": "2020-06-30 09:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99837,
+   "missing_1m": 3867,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2369700,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3867,
+    "rows_clean": 2365833
+   }
+  },
+  {
+   "inst": "COSUSDT",
+   "symbol": "COSUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-30 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99029,
+   "missing_1m": 1293,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 133140,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1293,
+    "rows_clean": 131847
+   }
+  },
+  {
+   "inst": "COTIUSDT",
+   "symbol": "COTIUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-10 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99867,
+   "missing_1m": 2674,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2005500,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2674,
+    "rows_clean": 2002826
+   }
+  },
+  {
+   "inst": "COWUSDT",
+   "symbol": "COWUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-06 13:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 79830,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 79830
+   }
+  },
+  {
+   "inst": "CRVUSDT",
+   "symbol": "CRVUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-01 07:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9995,
+   "missing_1m": 1141,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2279099,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1140,
+    "rows_clean": 2277959
+   }
+  },
+  {
+   "inst": "CTKUSDT",
+   "symbol": "CTKUSDT",
+   "segment": 1,
+   "listing_utc": "2020-11-19 07:00",
+   "last_bar_utc": "2024-04-01 08:59",
+   "coverage": 0.99469,
+   "missing_1m": 9395,
+   "max_gap_min": 62,
+   "audit": {
+    "rows_raw": 2165340,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 404855,
+    "rows_clean": 1760485
+   }
+  },
+  {
+   "inst": "CTSIUSDT",
+   "symbol": "CTSIUSDT",
+   "segment": 1,
+   "listing_utc": "2021-10-26 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99105,
+   "missing_1m": 14982,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1674510,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 14982,
+    "rows_clean": 1659528
+   }
+  },
+  {
+   "inst": "CVCUSDT",
+   "symbol": "CVCUSDT",
+   "segment": 1,
+   "listing_utc": "2020-11-11 07:00",
+   "last_bar_utc": "2022-11-29 08:59",
+   "coverage": 0.99885,
+   "missing_1m": 1238,
+   "max_gap_min": 60,
+   "audit": {
+    "rows_raw": 2176860,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1100858,
+    "rows_clean": 1076002
+   }
+  },
+  {
+   "inst": "CVXUSDT",
+   "symbol": "CVXUSDT",
+   "segment": 1,
+   "listing_utc": "2022-09-22 12:15",
+   "last_bar_utc": "2024-05-14 09:00",
+   "coverage": 0.98117,
+   "missing_1m": 16262,
+   "max_gap_min": 20,
+   "audit": {
+    "rows_raw": 1197345,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 349797,
+    "rows_clean": 847548
+   }
+  },
+  {
+   "inst": "CYBERUSDT",
+   "symbol": "CYBERUSDT",
+   "segment": 1,
+   "listing_utc": "2023-08-21 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99951,
+   "missing_1m": 355,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 717840,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 355,
+    "rows_clean": 717485
+   }
+  },
+  {
+   "inst": "DARUSDT",
+   "symbol": "DARUSDT",
+   "segment": 1,
+   "listing_utc": "2022-04-29 03:30",
+   "last_bar_utc": "2024-12-26 09:00",
+   "coverage": 0.98631,
+   "missing_1m": 19165,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1408110,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 27260,
+    "rows_clean": 1380850
+   }
+  },
+  {
+   "inst": "DASHUSDT",
+   "symbol": "DASHUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-04 08:06",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98838,
+   "missing_1m": 30000,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2581434,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 29999,
+    "rows_clean": 2551435
+   }
+  },
+  {
+   "inst": "DEFIUSDT",
+   "symbol": "DEFIUSDT",
+   "segment": 1,
+   "listing_utc": "2020-08-28 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.97393,
+   "missing_1m": 59564,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2284860,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 59564,
+    "rows_clean": 2225296
+   }
+  },
+  {
+   "inst": "DEGENUSDT",
+   "symbol": "DEGENUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-15 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 66990,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 66990
+   }
+  },
+  {
+   "inst": "DEGOUSDT",
+   "symbol": "DEGOUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-13 13:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99944,
+   "missing_1m": 15,
+   "max_gap_min": 2,
+   "audit": {
+    "rows_raw": 26565,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 15,
+    "rows_clean": 26550
+   }
+  },
+  {
+   "inst": "DENTUSDT",
+   "symbol": "DENTUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-24 04:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98983,
+   "missing_1m": 20198,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 1985519,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 20197,
+    "rows_clean": 1965322
+   }
+  },
+  {
+   "inst": "DEXEUSDT",
+   "symbol": "DEXEUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-24 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99991,
+   "missing_1m": 1,
+   "max_gap_min": 2,
+   "audit": {
+    "rows_raw": 10830,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1,
+    "rows_clean": 10829
+   }
+  },
+  {
+   "inst": "DFUSDT",
+   "symbol": "DFUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-30 11:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 2175,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 2175
+   }
+  },
+  {
+   "inst": "DGBUSDT",
+   "symbol": "DGBUSDT",
+   "segment": 1,
+   "listing_utc": "2021-04-21 03:30",
+   "last_bar_utc": "2024-04-01 09:00",
+   "coverage": 0.9847,
+   "missing_1m": 23710,
+   "max_gap_min": 36,
+   "audit": {
+    "rows_raw": 1945230,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 419165,
+    "rows_clean": 1526065
+   }
+  },
+  {
+   "inst": "DIAUSDT",
+   "symbol": "DIAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-10-02 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99931,
+   "missing_1m": 90,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 130290,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 90,
+    "rows_clean": 130200
+   }
+  },
+  {
+   "inst": "DODOUSDT",
+   "symbol": "DODOUSDT",
+   "segment": 1,
+   "listing_utc": "2021-02-19 13:00",
+   "last_bar_utc": "2022-05-27 08:59",
+   "coverage": 0.99946,
+   "missing_1m": 358,
+   "max_gap_min": 61,
+   "audit": {
+    "rows_raw": 665058,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 376,
+    "rows_clean": 664682
+   }
+  },
+  {
+   "inst": "DODOXUSDT",
+   "symbol": "DODOXUSDT",
+   "segment": 1,
+   "listing_utc": "2023-08-08 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98935,
+   "missing_1m": 7847,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 736560,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 7847,
+    "rows_clean": 728713
+   }
+  },
+  {
+   "inst": "DOGEUSDT",
+   "symbol": "DOGEUSDT",
+   "segment": 1,
+   "listing_utc": "2020-07-10 09:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99398,
+   "missing_1m": 14179,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2355300,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 14179,
+    "rows_clean": 2341121
+   }
+  },
+  {
+   "inst": "DOGSUSDT",
+   "symbol": "DOGSUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-26 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99952,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 183570,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 183481
+   }
+  },
+  {
+   "inst": "DOTECOUSDT",
+   "symbol": "DOTECOUSDT",
+   "segment": 1,
+   "listing_utc": "2021-01-20 07:00",
+   "last_bar_utc": "2021-02-19 09:30",
+   "coverage": 0.96799,
+   "missing_1m": 1388,
+   "max_gap_min": 19,
+   "audit": {
+    "rows_raw": 43358,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1391,
+    "rows_clean": 41967
+   }
+  },
+  {
+   "inst": "DOTUSDT",
+   "symbol": "DOTUSDT",
+   "segment": 1,
+   "listing_utc": "2020-08-22 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99979,
+   "missing_1m": 476,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2293500,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 476,
+    "rows_clean": 2293024
+   }
+  },
+  {
+   "inst": "DRIFTUSDT",
+   "symbol": "DRIFTUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-08 15:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 76815,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 76815
+   }
+  },
+  {
+   "inst": "DUSKUSDT",
+   "symbol": "DUSKUSDT",
+   "segment": 1,
+   "listing_utc": "2022-01-07 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99663,
+   "missing_1m": 5285,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1569390,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5285,
+    "rows_clean": 1564105
+   }
+  },
+  {
+   "inst": "DYDXUSDT",
+   "symbol": "DYDXUSDT",
+   "segment": 1,
+   "listing_utc": "2021-09-10 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99985,
+   "missing_1m": 256,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1740750,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 256,
+    "rows_clean": 1740494
+   }
+  },
+  {
+   "inst": "DYMUSDT",
+   "symbol": "DYMUSDT",
+   "segment": 1,
+   "listing_utc": "2024-02-07 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99977,
+   "missing_1m": 109,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 473340,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 109,
+    "rows_clean": 473231
+   }
+  },
+  {
+   "inst": "EDUUSDT",
+   "symbol": "EDUUSDT",
+   "segment": 1,
+   "listing_utc": "2023-04-30 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9989,
+   "missing_1m": 970,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 880560,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 970,
+    "rows_clean": 879590
+   }
+  },
+  {
+   "inst": "EGLDUSDT",
+   "symbol": "EGLDUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-14 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99754,
+   "missing_1m": 5555,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2260380,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5555,
+    "rows_clean": 2254825
+   }
+  },
+  {
+   "inst": "EIGENUSDT",
+   "symbol": "EIGENUSDT",
+   "segment": 1,
+   "listing_utc": "2024-10-01 06:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99933,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 132120,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 132031
+   }
+  },
+  {
+   "inst": "ENAUSDT",
+   "symbol": "ENAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-04-02 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99977,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 393810,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 393721
+   }
+  },
+  {
+   "inst": "ENJUSDT",
+   "symbol": "ENJUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-29 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99674,
+   "missing_1m": 7304,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2238780,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 7304,
+    "rows_clean": 2231476
+   }
+  },
+  {
+   "inst": "ENSUSDT",
+   "symbol": "ENSUSDT",
+   "segment": 1,
+   "listing_utc": "2021-11-30 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99834,
+   "missing_1m": 2690,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1624110,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2690,
+    "rows_clean": 1621420
+   }
+  },
+  {
+   "inst": "EOSUSDT",
+   "symbol": "EOSUSDT",
+   "segment": 1,
+   "listing_utc": "2020-01-08 08:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99987,
+   "missing_1m": 351,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2620320,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 351,
+    "rows_clean": 2619969
+   }
+  },
+  {
+   "inst": "ETCUSDT",
+   "symbol": "ETCUSDT",
+   "segment": 1,
+   "listing_utc": "2020-01-16 08:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99905,
+   "missing_1m": 2479,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2608799,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2478,
+    "rows_clean": 2606321
+   }
+  },
+  {
+   "inst": "ETHFIUSDT",
+   "symbol": "ETHFIUSDT",
+   "segment": 1,
+   "listing_utc": "2024-03-18 15:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99977,
+   "missing_1m": 96,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 415230,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 96,
+    "rows_clean": 415134
+   }
+  },
+  {
+   "inst": "ETHUSDT",
+   "symbol": "ETHUSDT",
+   "segment": 1,
+   "listing_utc": "2020-01-01 00:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9999,
+   "missing_1m": 264,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2630880,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 264,
+    "rows_clean": 2630616
+   }
+  },
+  {
+   "inst": "ETHWUSDT",
+   "symbol": "ETHWUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-28 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98064,
+   "missing_1m": 11139,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 575250,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 11139,
+    "rows_clean": 564111
+   }
+  },
+  {
+   "inst": "FARTCOINUSDT",
+   "symbol": "FARTCOINUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-20 18:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 16155,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 16155
+   }
+  },
+  {
+   "inst": "FETUSDT",
+   "symbol": "FETUSDT",
+   "segment": 1,
+   "listing_utc": "2023-01-17 02:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99946,
+   "missing_1m": 556,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1029450,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 556,
+    "rows_clean": 1028894
+   }
+  },
+  {
+   "inst": "FIDAUSDT",
+   "symbol": "FIDAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-19 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99917,
+   "missing_1m": 123,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 149010,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 123,
+    "rows_clean": 148887
+   }
+  },
+  {
+   "inst": "FILUSDT",
+   "symbol": "FILUSDT",
+   "segment": 1,
+   "listing_utc": "2020-10-16 06:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99631,
+   "missing_1m": 8169,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2207160,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 969,
+    "rows_clean": 2206191
+   }
+  },
+  {
+   "inst": "FIOUSDT",
+   "symbol": "FIOUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-20 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99879,
+   "missing_1m": 179,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 147630,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 179,
+    "rows_clean": 147451
+   }
+  },
+  {
+   "inst": "FLMUSDT",
+   "symbol": "FLMUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-29 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98897,
+   "missing_1m": 24685,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2231580,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 17485,
+    "rows_clean": 2214095
+   }
+  },
+  {
+   "inst": "FLOWUSDT",
+   "symbol": "FLOWUSDT",
+   "segment": 1,
+   "listing_utc": "2022-02-10 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98899,
+   "missing_1m": 16736,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1513230,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 9536,
+    "rows_clean": 1503694
+   }
+  },
+  {
+   "inst": "FLUXUSDT",
+   "symbol": "FLUXUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-03 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.993,
+   "missing_1m": 1207,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 172380,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1207,
+    "rows_clean": 171173
+   }
+  },
+  {
+   "inst": "FOOTBALLUSDT",
+   "symbol": "FOOTBALLUSDT",
+   "segment": 1,
+   "listing_utc": "2022-09-01 03:00",
+   "last_bar_utc": "2024-03-26 08:59",
+   "coverage": 0.98349,
+   "missing_1m": 13605,
+   "max_gap_min": 20,
+   "audit": {
+    "rows_raw": 914648,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 104213,
+    "rows_clean": 810435
+   }
+  },
+  {
+   "inst": "FRONTUSDT",
+   "symbol": "FRONTUSDT",
+   "segment": 1,
+   "listing_utc": "2023-09-22 14:30",
+   "last_bar_utc": "2024-08-23 08:59",
+   "coverage": 0.99899,
+   "missing_1m": 486,
+   "max_gap_min": 4,
+   "audit": {
+    "rows_raw": 510916,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 27892,
+    "rows_clean": 483024
+   }
+  },
+  {
+   "inst": "FTMUSDT",
+   "symbol": "FTMUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-24 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99628,
+   "missing_1m": 8347,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2238780,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1147,
+    "rows_clean": 2237633
+   }
+  },
+  {
+   "inst": "FTTUSDT",
+   "symbol": "FTTUSDT",
+   "segment": 1,
+   "listing_utc": "2022-04-15 03:30",
+   "last_bar_utc": "2022-11-14 04:00",
+   "coverage": 0.99794,
+   "missing_1m": 633,
+   "max_gap_min": 36,
+   "audit": {
+    "rows_raw": 1428270,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1122148,
+    "rows_clean": 306122
+   }
+  },
+  {
+   "inst": "FXSUSDT",
+   "symbol": "FXSUSDT",
+   "segment": 1,
+   "listing_utc": "2023-01-20 03:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99698,
+   "missing_1m": 3094,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1025100,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3094,
+    "rows_clean": 1022006
+   }
+  },
+  {
+   "inst": "GALAUSDT",
+   "symbol": "GALAUSDT",
+   "segment": 1,
+   "listing_utc": "2021-09-18 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99989,
+   "missing_1m": 198,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1729230,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 198,
+    "rows_clean": 1729032
+   }
+  },
+  {
+   "inst": "GALUSDT",
+   "symbol": "GALUSDT",
+   "segment": 1,
+   "listing_utc": "2022-05-05 14:00",
+   "last_bar_utc": "2024-07-11 09:00",
+   "coverage": 0.99891,
+   "missing_1m": 1250,
+   "max_gap_min": 36,
+   "audit": {
+    "rows_raw": 1176017,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 28442,
+    "rows_clean": 1147575
+   }
+  },
+  {
+   "inst": "GASUSDT",
+   "symbol": "GASUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-25 02:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99816,
+   "missing_1m": 1147,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 624795,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1147,
+    "rows_clean": 623648
+   }
+  },
+  {
+   "inst": "GHSTUSDT",
+   "symbol": "GHSTUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-23 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98163,
+   "missing_1m": 2631,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 143220,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2631,
+    "rows_clean": 140589
+   }
+  },
+  {
+   "inst": "GLMRUSDT",
+   "symbol": "GLMRUSDT",
+   "segment": 1,
+   "listing_utc": "2023-09-26 01:30",
+   "last_bar_utc": "2024-05-15 09:00",
+   "coverage": 0.99496,
+   "missing_1m": 1685,
+   "max_gap_min": 4,
+   "audit": {
+    "rows_raw": 666630,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 333780,
+    "rows_clean": 332850
+   }
+  },
+  {
+   "inst": "GLMUSDT",
+   "symbol": "GLMUSDT",
+   "segment": 1,
+   "listing_utc": "2024-02-22 10:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9979,
+   "missing_1m": 948,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 451560,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 948,
+    "rows_clean": 450612
+   }
+  },
+  {
+   "inst": "GMTUSDT",
+   "symbol": "GMTUSDT",
+   "segment": 1,
+   "listing_utc": "2022-03-15 04:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99753,
+   "missing_1m": 3644,
+   "max_gap_min": 2881,
+   "audit": {
+    "rows_raw": 1470000,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 764,
+    "rows_clean": 1469236
+   }
+  },
+  {
+   "inst": "GMXUSDT",
+   "symbol": "GMXUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-17 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99616,
+   "missing_1m": 3774,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 984090,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3774,
+    "rows_clean": 980316
+   }
+  },
+  {
+   "inst": "GOATUSDT",
+   "symbol": "GOATUSDT",
+   "segment": 1,
+   "listing_utc": "2024-10-24 13:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9991,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 98550,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 98461
+   }
+  },
+  {
+   "inst": "GRASSUSDT",
+   "symbol": "GRASSUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-08 15:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 76830,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 76830
+   }
+  },
+  {
+   "inst": "GRTUSDT",
+   "symbol": "GRTUSDT",
+   "segment": 1,
+   "listing_utc": "2020-12-19 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99632,
+   "missing_1m": 7816,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2114940,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 616,
+    "rows_clean": 2114324
+   }
+  },
+  {
+   "inst": "GTCUSDT",
+   "symbol": "GTCUSDT",
+   "segment": 1,
+   "listing_utc": "2021-06-11 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99058,
+   "missing_1m": 17637,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1864590,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 10437,
+    "rows_clean": 1854153
+   }
+  },
+  {
+   "inst": "GUSDT",
+   "symbol": "GUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-15 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98974,
+   "missing_1m": 2045,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 199410,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2045,
+    "rows_clean": 197365
+   }
+  },
+  {
+   "inst": "HBARUSDT",
+   "symbol": "HBARUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-17 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99575,
+   "missing_1m": 8489,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1988220,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1289,
+    "rows_clean": 1986931
+   }
+  },
+  {
+   "inst": "HFTUSDT",
+   "symbol": "HFTUSDT",
+   "segment": 1,
+   "listing_utc": "2023-04-06 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99381,
+   "missing_1m": 5663,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 915120,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5663,
+    "rows_clean": 909457
+   }
+  },
+  {
+   "inst": "HIFIUSDT",
+   "symbol": "HIFIUSDT",
+   "segment": 1,
+   "listing_utc": "2023-09-16 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.998,
+   "missing_1m": 1359,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 680250,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1359,
+    "rows_clean": 678891
+   }
+  },
+  {
+   "inst": "HIGHUSDT",
+   "symbol": "HIGHUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-07 02:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99499,
+   "missing_1m": 5011,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 999210,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5011,
+    "rows_clean": 994199
+   }
+  },
+  {
+   "inst": "HIPPOUSDT",
+   "symbol": "HIPPOUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-13 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99999,
+   "missing_1m": 1,
+   "max_gap_min": 2,
+   "audit": {
+    "rows_raw": 69810,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1,
+    "rows_clean": 69809
+   }
+  },
+  {
+   "inst": "HIVEUSDT",
+   "symbol": "HIVEUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-23 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 12270,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 12270
+   }
+  },
+  {
+   "inst": "HMSTRUSDT",
+   "symbol": "HMSTRUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-26 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99936,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 138930,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 138841
+   }
+  },
+  {
+   "inst": "HNTUSDT",
+   "symbol": "HNTUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-28 07:00",
+   "last_bar_utc": "2023-03-20 09:00",
+   "coverage": 0.99883,
+   "missing_1m": 1526,
+   "max_gap_min": 60,
+   "audit": {
+    "rows_raw": 1926732,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 627813,
+    "rows_clean": 1298919
+   }
+  },
+  {
+   "inst": "HOOKUSDT",
+   "symbol": "HOOKUSDT",
+   "segment": 1,
+   "listing_utc": "2023-01-23 03:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99846,
+   "missing_1m": 1573,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1020780,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1573,
+    "rows_clean": 1019207
+   }
+  },
+  {
+   "inst": "HOTUSDT",
+   "symbol": "HOTUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-30 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99178,
+   "missing_1m": 16257,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1969500,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 9057,
+    "rows_clean": 1960443
+   }
+  },
+  {
+   "inst": "ICPUSDT#1",
+   "symbol": "ICPUSDT",
+   "segment": 1,
+   "listing_utc": "2021-05-11 03:00",
+   "last_bar_utc": "2022-06-10 09:00",
+   "coverage": 0.99987,
+   "missing_1m": 73,
+   "max_gap_min": 36,
+   "audit": {
+    "rows_raw": 1878870,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 121277,
+    "rows_clean": 1757593
+   }
+  },
+  {
+   "inst": "ICPUSDT#2",
+   "symbol": "ICPUSDT",
+   "segment": 2,
+   "listing_utc": "2022-09-27 02:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99813,
+   "missing_1m": 2229,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1878870,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 121277,
+    "rows_clean": 1757593
+   }
+  },
+  {
+   "inst": "ICXUSDT",
+   "symbol": "ICXUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-15 06:59",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98781,
+   "missing_1m": 27534,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2258941,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 27530,
+    "rows_clean": 2231411
+   }
+  },
+  {
+   "inst": "IDEXUSDT",
+   "symbol": "IDEXUSDT",
+   "segment": 1,
+   "listing_utc": "2023-05-03 12:00",
+   "last_bar_utc": "2024-05-15 09:00",
+   "coverage": 0.98934,
+   "missing_1m": 5801,
+   "max_gap_min": 20,
+   "audit": {
+    "rows_raw": 876240,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 337896,
+    "rows_clean": 538344
+   }
+  },
+  {
+   "inst": "IDUSDT",
+   "symbol": "IDUSDT",
+   "segment": 1,
+   "listing_utc": "2023-03-23 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99865,
+   "missing_1m": 1259,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 935130,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1259,
+    "rows_clean": 933871
+   }
+  },
+  {
+   "inst": "ILVUSDT",
+   "symbol": "ILVUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-10 16:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99698,
+   "missing_1m": 1812,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 600930,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1812,
+    "rows_clean": 599118
+   }
+  },
+  {
+   "inst": "IMXUSDT",
+   "symbol": "IMXUSDT",
+   "segment": 1,
+   "listing_utc": "2022-02-11 03:31",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99463,
+   "missing_1m": 8150,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1511789,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 949,
+    "rows_clean": 1510840
+   }
+  },
+  {
+   "inst": "INJUSDT",
+   "symbol": "INJUSDT",
+   "segment": 1,
+   "listing_utc": "2022-08-17 02:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99747,
+   "missing_1m": 3167,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1249755,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3167,
+    "rows_clean": 1246588
+   }
+  },
+  {
+   "inst": "IOSTUSDT",
+   "symbol": "IOSTUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-21 08:05",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99127,
+   "missing_1m": 22334,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2556955,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 22334,
+    "rows_clean": 2534621
+   }
+  },
+  {
+   "inst": "IOTAUSDT",
+   "symbol": "IOTAUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-12 08:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.97591,
+   "missing_1m": 61907,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2562720,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 54707,
+    "rows_clean": 2508013
+   }
+  },
+  {
+   "inst": "IOTXUSDT",
+   "symbol": "IOTXUSDT",
+   "segment": 1,
+   "listing_utc": "2021-08-12 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99349,
+   "missing_1m": 11599,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1782510,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 11599,
+    "rows_clean": 1770911
+   }
+  },
+  {
+   "inst": "IOUSDT",
+   "symbol": "IOUSDT",
+   "segment": 1,
+   "listing_utc": "2024-06-11 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9997,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 292920,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 292831
+   }
+  },
+  {
+   "inst": "JASMYUSDT",
+   "symbol": "JASMYUSDT",
+   "segment": 1,
+   "listing_utc": "2022-04-20 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99924,
+   "missing_1m": 1076,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1421070,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1076,
+    "rows_clean": 1419994
+   }
+  },
+  {
+   "inst": "JOEUSDT",
+   "symbol": "JOEUSDT",
+   "segment": 1,
+   "listing_utc": "2023-03-29 12:12",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99511,
+   "missing_1m": 4534,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 926628,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4532,
+    "rows_clean": 922096
+   }
+  },
+  {
+   "inst": "JTOUSDT",
+   "symbol": "JTOUSDT",
+   "segment": 1,
+   "listing_utc": "2023-12-08 10:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99984,
+   "missing_1m": 92,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 560999,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 91,
+    "rows_clean": 560908
+   }
+  },
+  {
+   "inst": "JUPUSDT",
+   "symbol": "JUPUSDT",
+   "segment": 1,
+   "listing_utc": "2024-01-31 18:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99981,
+   "missing_1m": 93,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 482730,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 93,
+    "rows_clean": 482637
+   }
+  },
+  {
+   "inst": "KAIAUSDT",
+   "symbol": "KAIAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-04 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99937,
+   "missing_1m": 25,
+   "max_gap_min": 2,
+   "audit": {
+    "rows_raw": 39480,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 25,
+    "rows_clean": 39455
+   }
+  },
+  {
+   "inst": "KASUSDT",
+   "symbol": "KASUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-17 02:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9994,
+   "missing_1m": 353,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 591720,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 353,
+    "rows_clean": 591367
+   }
+  },
+  {
+   "inst": "KAVAUSDT",
+   "symbol": "KAVAUSDT",
+   "segment": 1,
+   "listing_utc": "2020-07-28 07:05",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99914,
+   "missing_1m": 1992,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2329495,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1992,
+    "rows_clean": 2327503
+   }
+  },
+  {
+   "inst": "KDAUSDT",
+   "symbol": "KDAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-18 13:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99402,
+   "missing_1m": 899,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 150390,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 899,
+    "rows_clean": 149491
+   }
+  },
+  {
+   "inst": "KEEPUSDT",
+   "symbol": "KEEPUSDT",
+   "segment": 1,
+   "listing_utc": "2021-06-22 03:30",
+   "last_bar_utc": "2022-02-15 02:00",
+   "coverage": 0.99561,
+   "missing_1m": 1504,
+   "max_gap_min": 7,
+   "audit": {
+    "rows_raw": 342634,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1503,
+    "rows_clean": 341131
+   }
+  },
+  {
+   "inst": "KEYUSDT",
+   "symbol": "KEYUSDT",
+   "segment": 1,
+   "listing_utc": "2023-05-24 12:00",
+   "last_bar_utc": "2024-12-03 08:59",
+   "coverage": 0.99573,
+   "missing_1m": 3434,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 846000,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 44654,
+    "rows_clean": 801346
+   }
+  },
+  {
+   "inst": "KLAYUSDT",
+   "symbol": "KLAYUSDT",
+   "segment": 1,
+   "listing_utc": "2021-10-12 03:30",
+   "last_bar_utc": "2024-10-22 08:59",
+   "coverage": 0.98996,
+   "missing_1m": 16000,
+   "max_gap_min": 36,
+   "audit": {
+    "rows_raw": 1694670,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 117700,
+    "rows_clean": 1576970
+   }
+  },
+  {
+   "inst": "KMNOUSDT",
+   "symbol": "KMNOUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-20 19:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99758,
+   "missing_1m": 39,
+   "max_gap_min": 2,
+   "audit": {
+    "rows_raw": 16140,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 39,
+    "rows_clean": 16101
+   }
+  },
+  {
+   "inst": "KNCUSDT",
+   "symbol": "KNCUSDT",
+   "segment": 1,
+   "listing_utc": "2020-06-22 08:54",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99039,
+   "missing_1m": 22873,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2374026,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 15669,
+    "rows_clean": 2358357
+   }
+  },
+  {
+   "inst": "KOMAUSDT",
+   "symbol": "KOMAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-10 12:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 30945,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 30945
+   }
+  },
+  {
+   "inst": "KSMUSDT",
+   "symbol": "KSMUSDT",
+   "segment": 1,
+   "listing_utc": "2020-10-14 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99385,
+   "missing_1m": 13646,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2209980,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 6446,
+    "rows_clean": 2203534
+   }
+  },
+  {
+   "inst": "LDOUSDT",
+   "symbol": "LDOUSDT",
+   "segment": 1,
+   "listing_utc": "2022-09-22 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99861,
+   "missing_1m": 1666,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1197360,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1666,
+    "rows_clean": 1195694
+   }
+  },
+  {
+   "inst": "LENDUSDT",
+   "symbol": "LENDUSDT",
+   "segment": 1,
+   "listing_utc": "2020-07-23 09:00",
+   "last_bar_utc": "2020-10-09 23:59",
+   "coverage": 0.9949,
+   "missing_1m": 577,
+   "max_gap_min": 13,
+   "audit": {
+    "rows_raw": 158375,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 45732,
+    "rows_clean": 112643
+   }
+  },
+  {
+   "inst": "LEVERUSDT",
+   "symbol": "LEVERUSDT",
+   "segment": 1,
+   "listing_utc": "2023-03-30 12:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99194,
+   "missing_1m": 7455,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 925185,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 7455,
+    "rows_clean": 917730
+   }
+  },
+  {
+   "inst": "LINAUSDT",
+   "symbol": "LINAUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-19 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99488,
+   "missing_1m": 10194,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1985340,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2994,
+    "rows_clean": 1982346
+   }
+  },
+  {
+   "inst": "LINKUSDT",
+   "symbol": "LINKUSDT",
+   "segment": 1,
+   "listing_utc": "2020-01-17 08:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99988,
+   "missing_1m": 311,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2607360,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 311,
+    "rows_clean": 2607049
+   }
+  },
+  {
+   "inst": "LISTAUSDT",
+   "symbol": "LISTAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-06-20 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99962,
+   "missing_1m": 106,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 280050,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 106,
+    "rows_clean": 279944
+   }
+  },
+  {
+   "inst": "LITUSDT",
+   "symbol": "LITUSDT",
+   "segment": 1,
+   "listing_utc": "2021-02-18 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98986,
+   "missing_1m": 20631,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2027100,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 13431,
+    "rows_clean": 2013669
+   }
+  },
+  {
+   "inst": "LOKAUSDT",
+   "symbol": "LOKAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-24 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98855,
+   "missing_1m": 1624,
+   "max_gap_min": 77,
+   "audit": {
+    "rows_raw": 141870,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1624,
+    "rows_clean": 140246
+   }
+  },
+  {
+   "inst": "LOOMUSDT",
+   "symbol": "LOOMUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-11 14:30",
+   "last_bar_utc": "2024-12-09 08:59",
+   "coverage": 0.99373,
+   "missing_1m": 3833,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 644250,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 36413,
+    "rows_clean": 607837
+   }
+  },
+  {
+   "inst": "LPTUSDT",
+   "symbol": "LPTUSDT",
+   "segment": 1,
+   "listing_utc": "2021-11-11 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9985,
+   "missing_1m": 2475,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1651470,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2475,
+    "rows_clean": 1648995
+   }
+  },
+  {
+   "inst": "LQTYUSDT",
+   "symbol": "LQTYUSDT",
+   "segment": 1,
+   "listing_utc": "2023-03-10 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99881,
+   "missing_1m": 1133,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 954000,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1133,
+    "rows_clean": 952867
+   }
+  },
+  {
+   "inst": "LRCUSDT",
+   "symbol": "LRCUSDT",
+   "segment": 1,
+   "listing_utc": "2020-10-19 07:05",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99265,
+   "missing_1m": 16237,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2202775,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 9037,
+    "rows_clean": 2193738
+   }
+  },
+  {
+   "inst": "LSKUSDT",
+   "symbol": "LSKUSDT",
+   "segment": 1,
+   "listing_utc": "2024-01-25 14:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99467,
+   "missing_1m": 2622,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 491625,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2622,
+    "rows_clean": 489003
+   }
+  },
+  {
+   "inst": "LTCUSDT",
+   "symbol": "LTCUSDT",
+   "segment": 1,
+   "listing_utc": "2020-01-09 08:09",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99704,
+   "missing_1m": 7740,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2611671,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 536,
+    "rows_clean": 2611135
+   }
+  },
+  {
+   "inst": "LUMIAUSDT",
+   "symbol": "LUMIAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-18 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99964,
+   "missing_1m": 7,
+   "max_gap_min": 2,
+   "audit": {
+    "rows_raw": 19470,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 7,
+    "rows_clean": 19463
+   }
+  },
+  {
+   "inst": "LUNA2USDT",
+   "symbol": "LUNA2USDT",
+   "segment": 1,
+   "listing_utc": "2022-09-10 03:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99841,
+   "missing_1m": 1938,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1215180,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1938,
+    "rows_clean": 1213242
+   }
+  },
+  {
+   "inst": "LUNAUSDT",
+   "symbol": "LUNAUSDT",
+   "segment": 1,
+   "listing_utc": "2021-01-28 07:00",
+   "last_bar_utc": "2022-05-12 15:32",
+   "coverage": 0.98915,
+   "missing_1m": 7331,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 669590,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1046,
+    "rows_clean": 668544
+   }
+  },
+  {
+   "inst": "MAGICUSDT",
+   "symbol": "MAGICUSDT",
+   "segment": 1,
+   "listing_utc": "2023-01-25 03:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99927,
+   "missing_1m": 746,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1017900,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 746,
+    "rows_clean": 1017154
+   }
+  },
+  {
+   "inst": "MANAUSDT",
+   "symbol": "MANAUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-15 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99599,
+   "missing_1m": 8013,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1991100,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 813,
+    "rows_clean": 1990287
+   }
+  },
+  {
+   "inst": "MANTAUSDT",
+   "symbol": "MANTAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-01-18 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9998,
+   "missing_1m": 102,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 501720,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 102,
+    "rows_clean": 501618
+   }
+  },
+  {
+   "inst": "MASKUSDT",
+   "symbol": "MASKUSDT",
+   "segment": 1,
+   "listing_utc": "2021-08-27 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99492,
+   "missing_1m": 8952,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1753710,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1752,
+    "rows_clean": 1751958
+   }
+  },
+  {
+   "inst": "MATICUSDT",
+   "symbol": "MATICUSDT",
+   "segment": 1,
+   "listing_utc": "2020-10-22 07:01",
+   "last_bar_utc": "2024-09-04 08:59",
+   "coverage": 0.99537,
+   "missing_1m": 9426,
+   "max_gap_min": 60,
+   "audit": {
+    "rows_raw": 2044962,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 19548,
+    "rows_clean": 2025414
+   }
+  },
+  {
+   "inst": "MAVIAUSDT",
+   "symbol": "MAVIAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-02-21 10:00",
+   "last_bar_utc": "2024-12-16 09:00",
+   "coverage": 0.99953,
+   "missing_1m": 201,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 453000,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 22696,
+    "rows_clean": 430304
+   }
+  },
+  {
+   "inst": "MAVUSDT",
+   "symbol": "MAVUSDT",
+   "segment": 1,
+   "listing_utc": "2023-06-29 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99756,
+   "missing_1m": 1937,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 794160,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1937,
+    "rows_clean": 792223
+   }
+  },
+  {
+   "inst": "MBLUSDT",
+   "symbol": "MBLUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-14 15:00",
+   "last_bar_utc": "2024-05-13 08:59",
+   "coverage": 0.97683,
+   "missing_1m": 6031,
+   "max_gap_min": 10,
+   "audit": {
+    "rows_raw": 281779,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 27530,
+    "rows_clean": 254249
+   }
+  },
+  {
+   "inst": "MBOXUSDT",
+   "symbol": "MBOXUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-28 09:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99086,
+   "missing_1m": 1654,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 180870,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1654,
+    "rows_clean": 179216
+   }
+  },
+  {
+   "inst": "MDTUSDT",
+   "symbol": "MDTUSDT",
+   "segment": 1,
+   "listing_utc": "2023-06-30 12:00",
+   "last_bar_utc": "2024-05-16 09:00",
+   "coverage": 0.9941,
+   "missing_1m": 2726,
+   "max_gap_min": 20,
+   "audit": {
+    "rows_raw": 792720,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 333381,
+    "rows_clean": 459339
+   }
+  },
+  {
+   "inst": "MEMEUSDT",
+   "symbol": "MEMEUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-03 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99984,
+   "missing_1m": 98,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 611280,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 98,
+    "rows_clean": 611182
+   }
+  },
+  {
+   "inst": "METISUSDT",
+   "symbol": "METISUSDT",
+   "segment": 1,
+   "listing_utc": "2024-03-12 08:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99635,
+   "missing_1m": 1550,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 424290,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1550,
+    "rows_clean": 422740
+   }
+  },
+  {
+   "inst": "MEUSDT",
+   "symbol": "MEUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-10 17:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 30660,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 30660
+   }
+  },
+  {
+   "inst": "MEWUSDT",
+   "symbol": "MEWUSDT",
+   "segment": 1,
+   "listing_utc": "2024-06-17 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99968,
+   "missing_1m": 91,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 284280,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 91,
+    "rows_clean": 284189
+   }
+  },
+  {
+   "inst": "MINAUSDT",
+   "symbol": "MINAUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-07 11:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99777,
+   "missing_1m": 2228,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 998700,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2228,
+    "rows_clean": 996472
+   }
+  },
+  {
+   "inst": "MKRUSDT",
+   "symbol": "MKRUSDT",
+   "segment": 1,
+   "listing_utc": "2020-08-13 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99619,
+   "missing_1m": 8778,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2299260,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1578,
+    "rows_clean": 2297682
+   }
+  },
+  {
+   "inst": "MOCAUSDT",
+   "symbol": "MOCAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-16 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 22350,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 22350
+   }
+  },
+  {
+   "inst": "MOODENGUSDT",
+   "symbol": "MOODENGUSDT",
+   "segment": 1,
+   "listing_utc": "2024-10-25 10:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99909,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 97320,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 97231
+   }
+  },
+  {
+   "inst": "MORPHOUSDT",
+   "symbol": "MORPHOUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-27 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 49530,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 49530
+   }
+  },
+  {
+   "inst": "MOVEUSDT",
+   "symbol": "MOVEUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-09 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 32280,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 32280
+   }
+  },
+  {
+   "inst": "MOVRUSDT",
+   "symbol": "MOVRUSDT",
+   "segment": 1,
+   "listing_utc": "2023-12-26 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99908,
+   "missing_1m": 494,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 534930,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 494,
+    "rows_clean": 534436
+   }
+  },
+  {
+   "inst": "MTLUSDT",
+   "symbol": "MTLUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-31 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99919,
+   "missing_1m": 1592,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1975260,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1592,
+    "rows_clean": 1973668
+   }
+  },
+  {
+   "inst": "MYROUSDT",
+   "symbol": "MYROUSDT",
+   "segment": 1,
+   "listing_utc": "2024-03-05 08:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99978,
+   "missing_1m": 94,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 434370,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 94,
+    "rows_clean": 434276
+   }
+  },
+  {
+   "inst": "NEARUSDT",
+   "symbol": "NEARUSDT",
+   "segment": 1,
+   "listing_utc": "2020-10-15 08:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99607,
+   "missing_1m": 8716,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2208480,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1516,
+    "rows_clean": 2206964
+   }
+  },
+  {
+   "inst": "NEIROETHUSDT",
+   "symbol": "NEIROETHUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-06 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99947,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 167640,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 167551
+   }
+  },
+  {
+   "inst": "NEIROUSDT",
+   "symbol": "NEIROUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-16 11:32",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99941,
+   "missing_1m": 91,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 153388,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 153299
+   }
+  },
+  {
+   "inst": "NEOUSDT",
+   "symbol": "NEOUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-17 08:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99385,
+   "missing_1m": 15760,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2562675,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 15760,
+    "rows_clean": 2546915
+   }
+  },
+  {
+   "inst": "NFPUSDT",
+   "symbol": "NFPUSDT",
+   "segment": 1,
+   "listing_utc": "2023-12-27 13:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99917,
+   "missing_1m": 445,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 533430,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 445,
+    "rows_clean": 532985
+   }
+  },
+  {
+   "inst": "NKNUSDT",
+   "symbol": "NKNUSDT",
+   "segment": 1,
+   "listing_utc": "2021-04-09 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9978,
+   "missing_1m": 4323,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1962300,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4323,
+    "rows_clean": 1957977
+   }
+  },
+  {
+   "inst": "NMRUSDT",
+   "symbol": "NMRUSDT",
+   "segment": 1,
+   "listing_utc": "2023-06-22 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9798,
+   "missing_1m": 16247,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 804240,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 16247,
+    "rows_clean": 787993
+   }
+  },
+  {
+   "inst": "NOTUSDT",
+   "symbol": "NOTUSDT",
+   "segment": 1,
+   "listing_utc": "2024-05-16 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99973,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 330360,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 330271
+   }
+  },
+  {
+   "inst": "NTRNUSDT",
+   "symbol": "NTRNUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-14 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99626,
+   "missing_1m": 2229,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 595440,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2229,
+    "rows_clean": 593211
+   }
+  },
+  {
+   "inst": "NULSUSDT",
+   "symbol": "NULSUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-26 08:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99464,
+   "missing_1m": 986,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 183810,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 986,
+    "rows_clean": 182824
+   }
+  },
+  {
+   "inst": "NUUSDT",
+   "symbol": "NUUSDT",
+   "segment": 1,
+   "listing_utc": "2021-10-21 03:30",
+   "last_bar_utc": "2022-02-15 02:00",
+   "coverage": 0.99935,
+   "missing_1m": 109,
+   "max_gap_min": 3,
+   "audit": {
+    "rows_raw": 168394,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 108,
+    "rows_clean": 168286
+   }
+  },
+  {
+   "inst": "OCEANUSDT",
+   "symbol": "OCEANUSDT",
+   "segment": 1,
+   "listing_utc": "2020-11-03 07:00",
+   "last_bar_utc": "2024-06-25 09:01",
+   "coverage": 0.9955,
+   "missing_1m": 8617,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2181180,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 274472,
+    "rows_clean": 1906708
+   }
+  },
+  {
+   "inst": "OGNUSDT",
+   "symbol": "OGNUSDT",
+   "segment": 1,
+   "listing_utc": "2021-04-01 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98983,
+   "missing_1m": 20067,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1966620,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 12867,
+    "rows_clean": 1953753
+   }
+  },
+  {
+   "inst": "OMGUSDT",
+   "symbol": "OMGUSDT",
+   "segment": 1,
+   "listing_utc": "2020-07-02 09:02",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99116,
+   "missing_1m": 20925,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2359618,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 13723,
+    "rows_clean": 2345895
+   }
+  },
+  {
+   "inst": "OMNIUSDT",
+   "symbol": "OMNIUSDT",
+   "segment": 1,
+   "listing_utc": "2024-04-17 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99972,
+   "missing_1m": 103,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 372120,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 103,
+    "rows_clean": 372017
+   }
+  },
+  {
+   "inst": "OMUSDT",
+   "symbol": "OMUSDT",
+   "segment": 1,
+   "listing_utc": "2024-02-13 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9998,
+   "missing_1m": 95,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 464280,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 95,
+    "rows_clean": 464185
+   }
+  },
+  {
+   "inst": "ONDOUSDT",
+   "symbol": "ONDOUSDT",
+   "segment": 1,
+   "listing_utc": "2024-01-20 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99982,
+   "missing_1m": 91,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 498900,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 91,
+    "rows_clean": 498809
+   }
+  },
+  {
+   "inst": "ONEUSDT",
+   "symbol": "ONEUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-18 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99178,
+   "missing_1m": 16399,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1986780,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 9199,
+    "rows_clean": 1977581
+   }
+  },
+  {
+   "inst": "ONGUSDT",
+   "symbol": "ONGUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-27 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99237,
+   "missing_1m": 4399,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 576660,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4399,
+    "rows_clean": 572261
+   }
+  },
+  {
+   "inst": "ONTUSDT",
+   "symbol": "ONTUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-11 08:05",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99198,
+   "missing_1m": 20621,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2571355,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 20621,
+    "rows_clean": 2550734
+   }
+  },
+  {
+   "inst": "OPUSDT",
+   "symbol": "OPUSDT",
+   "segment": 1,
+   "listing_utc": "2022-06-01 14:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99992,
+   "missing_1m": 114,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1359959,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 113,
+    "rows_clean": 1359846
+   }
+  },
+  {
+   "inst": "ORBSUSDT",
+   "symbol": "ORBSUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-17 06:00",
+   "last_bar_utc": "2024-12-09 08:59",
+   "coverage": 0.98234,
+   "missing_1m": 10657,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 636120,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 43237,
+    "rows_clean": 592883
+   }
+  },
+  {
+   "inst": "ORCAUSDT",
+   "symbol": "ORCAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-06 15:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 36540,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 36540
+   }
+  },
+  {
+   "inst": "ORDIUSDT",
+   "symbol": "ORDIUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-07 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99985,
+   "missing_1m": 92,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 605490,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 92,
+    "rows_clean": 605398
+   }
+  },
+  {
+   "inst": "OXTUSDT",
+   "symbol": "OXTUSDT",
+   "segment": 1,
+   "listing_utc": "2023-08-11 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.992,
+   "missing_1m": 5858,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 732240,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5858,
+    "rows_clean": 726382
+   }
+  },
+  {
+   "inst": "PENDLEUSDT",
+   "symbol": "PENDLEUSDT",
+   "segment": 1,
+   "listing_utc": "2023-07-28 02:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99761,
+   "missing_1m": 1800,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 752970,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1800,
+    "rows_clean": 751170
+   }
+  },
+  {
+   "inst": "PENGUUSDT",
+   "symbol": "PENGUUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-17 16:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 20625,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 20625
+   }
+  },
+  {
+   "inst": "PEOPLEUSDT",
+   "symbol": "PEOPLEUSDT",
+   "segment": 1,
+   "listing_utc": "2021-12-24 04:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99341,
+   "missing_1m": 10474,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1582320,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3274,
+    "rows_clean": 1579046
+   }
+  },
+  {
+   "inst": "PERPUSDT",
+   "symbol": "PERPUSDT",
+   "segment": 1,
+   "listing_utc": "2023-03-06 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99476,
+   "missing_1m": 5026,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 959760,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5026,
+    "rows_clean": 954734
+   }
+  },
+  {
+   "inst": "PHAUSDT",
+   "symbol": "PHAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-30 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 2190,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 2190
+   }
+  },
+  {
+   "inst": "PHBUSDT",
+   "symbol": "PHBUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-16 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99887,
+   "missing_1m": 1110,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 985530,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1110,
+    "rows_clean": 984420
+   }
+  },
+  {
+   "inst": "PIXELUSDT",
+   "symbol": "PIXELUSDT",
+   "segment": 1,
+   "listing_utc": "2024-02-19 15:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99959,
+   "missing_1m": 185,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 455580,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 185,
+    "rows_clean": 455395
+   }
+  },
+  {
+   "inst": "PNUTUSDT",
+   "symbol": "PNUTUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-11 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 72690,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 72690
+   }
+  },
+  {
+   "inst": "POLUSDT",
+   "symbol": "POLUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-13 12:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99915,
+   "missing_1m": 134,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 157665,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 134,
+    "rows_clean": 157531
+   }
+  },
+  {
+   "inst": "POLYXUSDT",
+   "symbol": "POLYXUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-25 02:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99701,
+   "missing_1m": 1867,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 624810,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1867,
+    "rows_clean": 622943
+   }
+  },
+  {
+   "inst": "PONKEUSDT",
+   "symbol": "PONKEUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-04 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99999,
+   "missing_1m": 1,
+   "max_gap_min": 2,
+   "audit": {
+    "rows_raw": 82770,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1,
+    "rows_clean": 82769
+   }
+  },
+  {
+   "inst": "POPCATUSDT",
+   "symbol": "POPCATUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-22 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99953,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 189300,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 189211
+   }
+  },
+  {
+   "inst": "PORTALUSDT",
+   "symbol": "PORTALUSDT",
+   "segment": 1,
+   "listing_utc": "2024-02-29 15:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99956,
+   "missing_1m": 193,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 441180,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 193,
+    "rows_clean": 440987
+   }
+  },
+  {
+   "inst": "POWRUSDT",
+   "symbol": "POWRUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-27 02:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99259,
+   "missing_1m": 4609,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 621930,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4609,
+    "rows_clean": 617321
+   }
+  },
+  {
+   "inst": "PYTHUSDT",
+   "symbol": "PYTHUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-22 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99959,
+   "missing_1m": 239,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 583770,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 239,
+    "rows_clean": 583531
+   }
+  },
+  {
+   "inst": "QNTUSDT",
+   "symbol": "QNTUSDT",
+   "segment": 1,
+   "listing_utc": "2022-10-20 02:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99578,
+   "missing_1m": 4886,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 1157610,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4886,
+    "rows_clean": 1152724
+   }
+  },
+  {
+   "inst": "QTUMUSDT",
+   "symbol": "QTUMUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-20 08:06",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.97989,
+   "missing_1m": 51457,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2558394,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 51456,
+    "rows_clean": 2506938
+   }
+  },
+  {
+   "inst": "QUICKUSDT",
+   "symbol": "QUICKUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-06 05:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99498,
+   "missing_1m": 845,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 168180,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 845,
+    "rows_clean": 167335
+   }
+  },
+  {
+   "inst": "RADUSDT",
+   "symbol": "RADUSDT",
+   "segment": 1,
+   "listing_utc": "2023-05-10 12:00",
+   "last_bar_utc": "2024-05-14 09:00",
+   "coverage": 0.97245,
+   "missing_1m": 14672,
+   "max_gap_min": 20,
+   "audit": {
+    "rows_raw": 866160,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 348207,
+    "rows_clean": 517953
+   }
+  },
+  {
+   "inst": "RAREUSDT",
+   "symbol": "RAREUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-15 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99866,
+   "missing_1m": 267,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 199380,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 267,
+    "rows_clean": 199113
+   }
+  },
+  {
+   "inst": "RAYSOLUSDT",
+   "symbol": "RAYSOLUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-10 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99961,
+   "missing_1m": 12,
+   "max_gap_min": 3,
+   "audit": {
+    "rows_raw": 30960,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 12,
+    "rows_clean": 30948
+   }
+  },
+  {
+   "inst": "RAYUSDT",
+   "symbol": "RAYUSDT",
+   "segment": 1,
+   "listing_utc": "2021-08-20 03:30",
+   "last_bar_utc": "2022-11-15 04:00",
+   "coverage": 0.99599,
+   "missing_1m": 2612,
+   "max_gap_min": 36,
+   "audit": {
+    "rows_raw": 1770990,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1122687,
+    "rows_clean": 648303
+   }
+  },
+  {
+   "inst": "RDNTUSDT",
+   "symbol": "RDNTUSDT",
+   "segment": 1,
+   "listing_utc": "2023-04-05 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9971,
+   "missing_1m": 2662,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 916560,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2662,
+    "rows_clean": 913898
+   }
+  },
+  {
+   "inst": "REEFUSDT",
+   "symbol": "REEFUSDT",
+   "segment": 1,
+   "listing_utc": "2021-02-22 07:08",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99628,
+   "missing_1m": 7543,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2028532,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 7540,
+    "rows_clean": 2020992
+   }
+  },
+  {
+   "inst": "REIUSDT",
+   "symbol": "REIUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-27 11:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99403,
+   "missing_1m": 821,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 137580,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 821,
+    "rows_clean": 136759
+   }
+  },
+  {
+   "inst": "RENDERUSDT",
+   "symbol": "RENDERUSDT",
+   "segment": 1,
+   "listing_utc": "2024-07-26 10:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9996,
+   "missing_1m": 92,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 228360,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 92,
+    "rows_clean": 228268
+   }
+  },
+  {
+   "inst": "RENUSDT",
+   "symbol": "RENUSDT",
+   "segment": 1,
+   "listing_utc": "2020-10-13 07:00",
+   "last_bar_utc": "2024-12-03 09:00",
+   "coverage": 0.99898,
+   "missing_1m": 2229,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2218620,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 43444,
+    "rows_clean": 2175176
+   }
+  },
+  {
+   "inst": "REZUSDT",
+   "symbol": "REZUSDT",
+   "segment": 1,
+   "listing_utc": "2024-04-30 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99972,
+   "missing_1m": 98,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 353400,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 98,
+    "rows_clean": 353302
+   }
+  },
+  {
+   "inst": "RIFUSDT",
+   "symbol": "RIFUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-21 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99832,
+   "missing_1m": 1058,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 629970,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1058,
+    "rows_clean": 628912
+   }
+  },
+  {
+   "inst": "RLCUSDT",
+   "symbol": "RLCUSDT",
+   "segment": 1,
+   "listing_utc": "2020-07-31 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9954,
+   "missing_1m": 10697,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2317980,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3497,
+    "rows_clean": 2314483
+   }
+  },
+  {
+   "inst": "RNDRUSDT",
+   "symbol": "RNDRUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-03 02:30",
+   "last_bar_utc": "2024-07-16 08:59",
+   "coverage": 0.9999,
+   "missing_1m": 79,
+   "max_gap_min": 20,
+   "audit": {
+    "rows_raw": 782147,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 20076,
+    "rows_clean": 762071
+   }
+  },
+  {
+   "inst": "RONINUSDT",
+   "symbol": "RONINUSDT",
+   "segment": 1,
+   "listing_utc": "2024-02-06 04:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99676,
+   "missing_1m": 1540,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 474930,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1540,
+    "rows_clean": 473390
+   }
+  },
+  {
+   "inst": "ROSEUSDT",
+   "symbol": "ROSEUSDT",
+   "segment": 1,
+   "listing_utc": "2021-12-31 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99427,
+   "missing_1m": 9044,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 1572270,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1844,
+    "rows_clean": 1570426
+   }
+  },
+  {
+   "inst": "RPLUSDT",
+   "symbol": "RPLUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-09 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99405,
+   "missing_1m": 972,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 163410,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 972,
+    "rows_clean": 162438
+   }
+  },
+  {
+   "inst": "RSRUSDT",
+   "symbol": "RSRUSDT",
+   "segment": 1,
+   "listing_utc": "2020-10-19 07:05",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99542,
+   "missing_1m": 10113,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2202775,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2913,
+    "rows_clean": 2199862
+   }
+  },
+  {
+   "inst": "RUNEUSDT",
+   "symbol": "RUNEUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-04 07:12",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99776,
+   "missing_1m": 5098,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2274768,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5096,
+    "rows_clean": 2269672
+   }
+  },
+  {
+   "inst": "RVNUSDT",
+   "symbol": "RVNUSDT",
+   "segment": 1,
+   "listing_utc": "2021-02-23 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98872,
+   "missing_1m": 22873,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2019900,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 15673,
+    "rows_clean": 2004227
+   }
+  },
+  {
+   "inst": "SAFEUSDT",
+   "symbol": "SAFEUSDT",
+   "segment": 1,
+   "listing_utc": "2024-10-25 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99894,
+   "missing_1m": 103,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 97170,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 103,
+    "rows_clean": 97067
+   }
+  },
+  {
+   "inst": "SAGAUSDT",
+   "symbol": "SAGAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-04-09 10:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99977,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 383850,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 383761
+   }
+  },
+  {
+   "inst": "SANDUSDT",
+   "symbol": "SANDUSDT",
+   "segment": 1,
+   "listing_utc": "2021-01-25 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99586,
+   "missing_1m": 8558,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2061660,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1358,
+    "rows_clean": 2060302
+   }
+  },
+  {
+   "inst": "SANTOSUSDT",
+   "symbol": "SANTOSUSDT",
+   "segment": 1,
+   "listing_utc": "2024-10-28 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99885,
+   "missing_1m": 107,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 92760,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 107,
+    "rows_clean": 92653
+   }
+  },
+  {
+   "inst": "SCRTUSDT",
+   "symbol": "SCRTUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-21 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99991,
+   "missing_1m": 5,
+   "max_gap_min": 2,
+   "audit": {
+    "rows_raw": 58350,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5,
+    "rows_clean": 58345
+   }
+  },
+  {
+   "inst": "SCRUSDT",
+   "symbol": "SCRUSDT",
+   "segment": 1,
+   "listing_utc": "2024-10-22 10:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99909,
+   "missing_1m": 92,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 101640,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 92,
+    "rows_clean": 101548
+   }
+  },
+  {
+   "inst": "SCUSDT",
+   "symbol": "SCUSDT",
+   "segment": 1,
+   "listing_utc": "2021-04-12 07:00",
+   "last_bar_utc": "2022-06-17 08:59",
+   "coverage": 0.99962,
+   "missing_1m": 233,
+   "max_gap_min": 36,
+   "audit": {
+    "rows_raw": 1957980,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1337453,
+    "rows_clean": 620527
+   }
+  },
+  {
+   "inst": "SEIUSDT",
+   "symbol": "SEIUSDT",
+   "segment": 1,
+   "listing_utc": "2023-08-17 02:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99866,
+   "missing_1m": 974,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 724170,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 974,
+    "rows_clean": 723196
+   }
+  },
+  {
+   "inst": "SFPUSDT",
+   "symbol": "SFPUSDT",
+   "segment": 1,
+   "listing_utc": "2021-02-24 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99761,
+   "missing_1m": 4849,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2025660,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4849,
+    "rows_clean": 2020811
+   }
+  },
+  {
+   "inst": "SKLUSDT",
+   "symbol": "SKLUSDT",
+   "segment": 1,
+   "listing_utc": "2020-12-08 07:35",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99363,
+   "missing_1m": 13626,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2130745,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 6426,
+    "rows_clean": 2124319
+   }
+  },
+  {
+   "inst": "SLERFUSDT",
+   "symbol": "SLERFUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-21 11:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99925,
+   "missing_1m": 44,
+   "max_gap_min": 3,
+   "audit": {
+    "rows_raw": 58350,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 44,
+    "rows_clean": 58306
+   }
+  },
+  {
+   "inst": "SLPUSDT",
+   "symbol": "SLPUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-31 14:30",
+   "last_bar_utc": "2024-05-15 09:00",
+   "coverage": 0.99696,
+   "missing_1m": 861,
+   "max_gap_min": 5,
+   "audit": {
+    "rows_raw": 615450,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 332956,
+    "rows_clean": 282494
+   }
+  },
+  {
+   "inst": "SNTUSDT",
+   "symbol": "SNTUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-02 12:30",
+   "last_bar_utc": "2024-05-13 08:59",
+   "coverage": 0.98182,
+   "missing_1m": 5048,
+   "max_gap_min": 13,
+   "audit": {
+    "rows_raw": 612690,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 340028,
+    "rows_clean": 272662
+   }
+  },
+  {
+   "inst": "SNXUSDT",
+   "symbol": "SNXUSDT",
+   "segment": 1,
+   "listing_utc": "2020-08-14 07:02",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99707,
+   "missing_1m": 6760,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2305018,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 6758,
+    "rows_clean": 2298260
+   }
+  },
+  {
+   "inst": "SOLUSDT",
+   "symbol": "SOLUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-14 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99662,
+   "missing_1m": 7634,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2253180,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 434,
+    "rows_clean": 2252746
+   }
+  },
+  {
+   "inst": "SPELLUSDT",
+   "symbol": "SPELLUSDT",
+   "segment": 1,
+   "listing_utc": "2022-09-06 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99312,
+   "missing_1m": 8402,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1220400,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 8402,
+    "rows_clean": 1211998
+   }
+  },
+  {
+   "inst": "SPXUSDT",
+   "symbol": "SPXUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-10 12:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 30915,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 30915
+   }
+  },
+  {
+   "inst": "SRMUSDT",
+   "symbol": "SRMUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-05 02:01",
+   "last_bar_utc": "2022-11-15 04:30",
+   "coverage": 0.99857,
+   "missing_1m": 1648,
+   "max_gap_min": 60,
+   "audit": {
+    "rows_raw": 1960150,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 808203,
+    "rows_clean": 1151947
+   }
+  },
+  {
+   "inst": "SSVUSDT",
+   "symbol": "SSVUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-24 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99488,
+   "missing_1m": 4984,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 974160,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4984,
+    "rows_clean": 969176
+   }
+  },
+  {
+   "inst": "STEEMUSDT",
+   "symbol": "STEEMUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-08 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98699,
+   "missing_1m": 7860,
+   "max_gap_min": 100,
+   "audit": {
+    "rows_raw": 603930,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 7860,
+    "rows_clean": 596070
+   }
+  },
+  {
+   "inst": "STGUSDT",
+   "symbol": "STGUSDT",
+   "segment": 1,
+   "listing_utc": "2022-08-25 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99356,
+   "missing_1m": 7965,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1237680,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 7965,
+    "rows_clean": 1229715
+   }
+  },
+  {
+   "inst": "STMXUSDT",
+   "symbol": "STMXUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-22 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99306,
+   "missing_1m": 13789,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1988220,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 13789,
+    "rows_clean": 1974431
+   }
+  },
+  {
+   "inst": "STORJUSDT",
+   "symbol": "STORJUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-16 07:03",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99206,
+   "missing_1m": 17932,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2250297,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 10729,
+    "rows_clean": 2239568
+   }
+  },
+  {
+   "inst": "STPTUSDT",
+   "symbol": "STPTUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-18 14:30",
+   "last_bar_utc": "2024-05-13 08:59",
+   "coverage": 0.98588,
+   "missing_1m": 4225,
+   "max_gap_min": 6,
+   "audit": {
+    "rows_raw": 634170,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 339205,
+    "rows_clean": 294965
+   }
+  },
+  {
+   "inst": "STRAXUSDT",
+   "symbol": "STRAXUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-11 02:30",
+   "last_bar_utc": "2024-03-15 08:59",
+   "coverage": 0.99916,
+   "missing_1m": 190,
+   "max_gap_min": 4,
+   "audit": {
+    "rows_raw": 644970,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 420130,
+    "rows_clean": 224840
+   }
+  },
+  {
+   "inst": "STRKUSDT",
+   "symbol": "STRKUSDT",
+   "segment": 1,
+   "listing_utc": "2024-02-20 17:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9998,
+   "missing_1m": 92,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 454020,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 92,
+    "rows_clean": 453928
+   }
+  },
+  {
+   "inst": "STXUSDT",
+   "symbol": "STXUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-21 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99963,
+   "missing_1m": 361,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 978330,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 361,
+    "rows_clean": 977969
+   }
+  },
+  {
+   "inst": "SUIUSDT",
+   "symbol": "SUIUSDT",
+   "segment": 1,
+   "listing_utc": "2023-05-03 16:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99987,
+   "missing_1m": 116,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 876000,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 116,
+    "rows_clean": 875884
+   }
+  },
+  {
+   "inst": "SUNUSDT",
+   "symbol": "SUNUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-22 13:05",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99951,
+   "missing_1m": 92,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 189295,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 92,
+    "rows_clean": 189203
+   }
+  },
+  {
+   "inst": "SUPERUSDT",
+   "symbol": "SUPERUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-26 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99956,
+   "missing_1m": 256,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 578100,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 256,
+    "rows_clean": 577844
+   }
+  },
+  {
+   "inst": "SUSHIUSDT",
+   "symbol": "SUSHIUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-04 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99629,
+   "missing_1m": 8432,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2267580,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1232,
+    "rows_clean": 2266348
+   }
+  },
+  {
+   "inst": "SWELLUSDT",
+   "symbol": "SWELLUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-08 16:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99986,
+   "missing_1m": 11,
+   "max_gap_min": 2,
+   "audit": {
+    "rows_raw": 76800,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 11,
+    "rows_clean": 76789
+   }
+  },
+  {
+   "inst": "SXPUSDT",
+   "symbol": "SXPUSDT",
+   "segment": 1,
+   "listing_utc": "2020-07-21 09:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99799,
+   "missing_1m": 4697,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2339460,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4697,
+    "rows_clean": 2334763
+   }
+  },
+  {
+   "inst": "SYNUSDT",
+   "symbol": "SYNUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-16 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99906,
+   "missing_1m": 186,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 197970,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 186,
+    "rows_clean": 197784
+   }
+  },
+  {
+   "inst": "SYSUSDT",
+   "symbol": "SYSUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-19 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99051,
+   "missing_1m": 1838,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 193650,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1838,
+    "rows_clean": 191812
+   }
+  },
+  {
+   "inst": "TAOUSDT",
+   "symbol": "TAOUSDT",
+   "segment": 1,
+   "listing_utc": "2024-04-11 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99976,
+   "missing_1m": 90,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 380730,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 90,
+    "rows_clean": 380640
+   }
+  },
+  {
+   "inst": "THETAUSDT",
+   "symbol": "THETAUSDT",
+   "segment": 1,
+   "listing_utc": "2020-05-27 08:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99481,
+   "missing_1m": 12560,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2418719,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 12559,
+    "rows_clean": 2406160
+   }
+  },
+  {
+   "inst": "THEUSDT",
+   "symbol": "THEUSDT",
+   "segment": 1,
+   "listing_utc": "2024-11-27 12:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 49665,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 49665
+   }
+  },
+  {
+   "inst": "TIAUSDT",
+   "symbol": "TIAUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-31 18:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99985,
+   "missing_1m": 92,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 615240,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 92,
+    "rows_clean": 615148
+   }
+  },
+  {
+   "inst": "TLMUSDT#1",
+   "symbol": "TLMUSDT",
+   "segment": 1,
+   "listing_utc": "2021-07-16 03:30",
+   "last_bar_utc": "2022-06-09 08:59",
+   "coverage": 0.99978,
+   "missing_1m": 105,
+   "max_gap_min": 36,
+   "audit": {
+    "rows_raw": 1778880,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 398507,
+    "rows_clean": 1380373
+   }
+  },
+  {
+   "inst": "TLMUSDT#2",
+   "symbol": "TLMUSDT",
+   "segment": 2,
+   "listing_utc": "2023-03-30 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98126,
+   "missing_1m": 17342,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1778880,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 398507,
+    "rows_clean": 1380373
+   }
+  },
+  {
+   "inst": "TNSRUSDT",
+   "symbol": "TNSRUSDT",
+   "segment": 1,
+   "listing_utc": "2024-04-08 17:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99974,
+   "missing_1m": 99,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 384900,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 99,
+    "rows_clean": 384801
+   }
+  },
+  {
+   "inst": "TOKENUSDT",
+   "symbol": "TOKENUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-03 15:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99951,
+   "missing_1m": 301,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 611100,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 301,
+    "rows_clean": 610799
+   }
+  },
+  {
+   "inst": "TOMOUSDT",
+   "symbol": "TOMOUSDT",
+   "segment": 1,
+   "listing_utc": "2020-10-12 07:00",
+   "last_bar_utc": "2023-11-14 08:59",
+   "coverage": 0.99671,
+   "missing_1m": 5343,
+   "max_gap_min": 60,
+   "audit": {
+    "rows_raw": 1906575,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 287478,
+    "rows_clean": 1619097
+   }
+  },
+  {
+   "inst": "TONUSDT",
+   "symbol": "TONUSDT",
+   "segment": 1,
+   "listing_utc": "2024-03-01 12:31",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99972,
+   "missing_1m": 124,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 439889,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 123,
+    "rows_clean": 439766
+   }
+  },
+  {
+   "inst": "TRBUSDT",
+   "symbol": "TRBUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-03 07:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.995,
+   "missing_1m": 11377,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2269019,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4176,
+    "rows_clean": 2264843
+   }
+  },
+  {
+   "inst": "TROYUSDT",
+   "symbol": "TROYUSDT",
+   "segment": 1,
+   "listing_utc": "2024-10-31 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 88500,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 88500
+   }
+  },
+  {
+   "inst": "TRUUSDT",
+   "symbol": "TRUUSDT",
+   "segment": 1,
+   "listing_utc": "2023-03-07 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99811,
+   "missing_1m": 1807,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 958320,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1807,
+    "rows_clean": 956513
+   }
+  },
+  {
+   "inst": "TRXUSDT",
+   "symbol": "TRXUSDT",
+   "segment": 1,
+   "listing_utc": "2020-01-15 08:05",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99542,
+   "missing_1m": 11953,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2603035,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4753,
+    "rows_clean": 2598282
+   }
+  },
+  {
+   "inst": "TURBOUSDT",
+   "symbol": "TURBOUSDT",
+   "segment": 1,
+   "listing_utc": "2024-05-30 15:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99971,
+   "missing_1m": 91,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 310110,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 91,
+    "rows_clean": 310019
+   }
+  },
+  {
+   "inst": "TUSDT",
+   "symbol": "TUSDT",
+   "segment": 1,
+   "listing_utc": "2023-02-01 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98879,
+   "missing_1m": 11291,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 1007220,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 11291,
+    "rows_clean": 995929
+   }
+  },
+  {
+   "inst": "TWTUSDT",
+   "symbol": "TWTUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-03 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99283,
+   "missing_1m": 4381,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 611130,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 4381,
+    "rows_clean": 606749
+   }
+  },
+  {
+   "inst": "UMAUSDT",
+   "symbol": "UMAUSDT",
+   "segment": 1,
+   "listing_utc": "2023-05-10 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98177,
+   "missing_1m": 15788,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 866130,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 15788,
+    "rows_clean": 850342
+   }
+  },
+  {
+   "inst": "UNFIUSDT",
+   "symbol": "UNFIUSDT",
+   "segment": 1,
+   "listing_utc": "2021-02-19 07:00",
+   "last_bar_utc": "2024-10-30 09:00",
+   "coverage": 0.99563,
+   "missing_1m": 8483,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2025660,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 91458,
+    "rows_clean": 1934202
+   }
+  },
+  {
+   "inst": "UNIUSDT",
+   "symbol": "UNIUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-18 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99967,
+   "missing_1m": 734,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2254620,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 734,
+    "rows_clean": 2253886
+   }
+  },
+  {
+   "inst": "USDCUSDT",
+   "symbol": "USDCUSDT",
+   "segment": 1,
+   "listing_utc": "2023-03-12 17:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.90324,
+   "missing_1m": 91998,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 950820,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 91998,
+    "rows_clean": 858822
+   }
+  },
+  {
+   "inst": "USTCUSDT",
+   "symbol": "USTCUSDT",
+   "segment": 1,
+   "listing_utc": "2023-11-27 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99594,
+   "missing_1m": 2343,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 576690,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 2343,
+    "rows_clean": 574347
+   }
+  },
+  {
+   "inst": "USUALUSDT",
+   "symbol": "USUALUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-18 13:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 19380,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 19380
+   }
+  },
+  {
+   "inst": "UXLINKUSDT",
+   "symbol": "UXLINKUSDT",
+   "segment": 1,
+   "listing_utc": "2024-09-15 15:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99936,
+   "missing_1m": 99,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 154620,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 99,
+    "rows_clean": 154521
+   }
+  },
+  {
+   "inst": "VANAUSDT",
+   "symbol": "VANAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-16 13:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 22230,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 22230
+   }
+  },
+  {
+   "inst": "VANRYUSDT",
+   "symbol": "VANRYUSDT",
+   "segment": 1,
+   "listing_utc": "2024-03-13 17:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99961,
+   "missing_1m": 165,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 422310,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 165,
+    "rows_clean": 422145
+   }
+  },
+  {
+   "inst": "VELODROMEUSDT",
+   "symbol": "VELODROMEUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-13 16:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 26385,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 26385
+   }
+  },
+  {
+   "inst": "VETUSDT",
+   "symbol": "VETUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-14 08:02",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99457,
+   "missing_1m": 13936,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2559838,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 6734,
+    "rows_clean": 2553104
+   }
+  },
+  {
+   "inst": "VIDTUSDT",
+   "symbol": "VIDTUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-23 09:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99917,
+   "missing_1m": 157,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 188070,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 157,
+    "rows_clean": 187913
+   }
+  },
+  {
+   "inst": "VIRTUALUSDT",
+   "symbol": "VIRTUALUSDT",
+   "segment": 1,
+   "listing_utc": "2024-12-10 12:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 1.0,
+   "missing_1m": 0,
+   "max_gap_min": 1,
+   "audit": {
+    "rows_raw": 30930,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 0,
+    "rows_clean": 30930
+   }
+  },
+  {
+   "inst": "VOXELUSDT",
+   "symbol": "VOXELUSDT",
+   "segment": 1,
+   "listing_utc": "2024-08-20 10:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9929,
+   "missing_1m": 1366,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 192330,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 1366,
+    "rows_clean": 190964
+   }
+  },
+  {
+   "inst": "WAVESUSDT",
+   "symbol": "WAVESUSDT",
+   "segment": 1,
+   "listing_utc": "2020-08-12 07:01",
+   "last_bar_utc": "2024-06-11 08:59",
+   "coverage": 0.9962,
+   "missing_1m": 7655,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2300699,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 293674,
+    "rows_clean": 2007025
+   }
+  },
+  {
+   "inst": "WAXPUSDT",
+   "symbol": "WAXPUSDT",
+   "segment": 1,
+   "listing_utc": "2023-10-18 14:45",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99106,
+   "missing_1m": 5669,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 634155,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 5669,
+    "rows_clean": 628486
+   }
+  },
+  {
+   "inst": "WIFUSDT",
+   "symbol": "WIFUSDT",
+   "segment": 1,
+   "listing_utc": "2024-01-18 14:15",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99982,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 501705,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 501616
+   }
+  },
+  {
+   "inst": "WLDUSDT",
+   "symbol": "WLDUSDT",
+   "segment": 1,
+   "listing_utc": "2023-07-24 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99985,
+   "missing_1m": 111,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 758160,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 111,
+    "rows_clean": 758049
+   }
+  },
+  {
+   "inst": "WOOUSDT",
+   "symbol": "WOOUSDT",
+   "segment": 1,
+   "listing_utc": "2022-04-08 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99939,
+   "missing_1m": 877,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 1438350,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 877,
+    "rows_clean": 1437473
+   }
+  },
+  {
+   "inst": "WUSDT",
+   "symbol": "WUSDT",
+   "segment": 1,
+   "listing_utc": "2024-04-03 15:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99963,
+   "missing_1m": 144,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 392190,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 144,
+    "rows_clean": 392046
+   }
+  },
+  {
+   "inst": "XAIUSDT",
+   "symbol": "XAIUSDT",
+   "segment": 1,
+   "listing_utc": "2024-01-09 14:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99974,
+   "missing_1m": 134,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 514680,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 134,
+    "rows_clean": 514546
+   }
+  },
+  {
+   "inst": "XEMUSDT",
+   "symbol": "XEMUSDT",
+   "segment": 1,
+   "listing_utc": "2021-03-03 07:00",
+   "last_bar_utc": "2024-12-09 09:00",
+   "coverage": 0.98981,
+   "missing_1m": 20205,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2008380,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 45580,
+    "rows_clean": 1962800
+   }
+  },
+  {
+   "inst": "XLMUSDT",
+   "symbol": "XLMUSDT",
+   "segment": 1,
+   "listing_utc": "2020-01-20 08:03",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9931,
+   "missing_1m": 17964,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2595837,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 10761,
+    "rows_clean": 2585076
+   }
+  },
+  {
+   "inst": "XMRUSDT",
+   "symbol": "XMRUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-03 08:03",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99508,
+   "missing_1m": 12718,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2582877,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 12715,
+    "rows_clean": 2570162
+   }
+  },
+  {
+   "inst": "XRPUSDT",
+   "symbol": "XRPUSDT",
+   "segment": 1,
+   "listing_utc": "2020-01-06 08:21",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99707,
+   "missing_1m": 7677,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2615979,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 476,
+    "rows_clean": 2615503
+   }
+  },
+  {
+   "inst": "XTZUSDT",
+   "symbol": "XTZUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-06 08:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99533,
+   "missing_1m": 12030,
+   "max_gap_min": 76,
+   "audit": {
+    "rows_raw": 2578560,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 12030,
+    "rows_clean": 2566530
+   }
+  },
+  {
+   "inst": "XVGUSDT",
+   "symbol": "XVGUSDT",
+   "segment": 1,
+   "listing_utc": "2023-07-05 12:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99545,
+   "missing_1m": 3576,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 785520,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3576,
+    "rows_clean": 781944
+   }
+  },
+  {
+   "inst": "XVSUSDT",
+   "symbol": "XVSUSDT",
+   "segment": 1,
+   "listing_utc": "2023-04-13 02:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.98798,
+   "missing_1m": 10886,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 905610,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 10886,
+    "rows_clean": 894724
+   }
+  },
+  {
+   "inst": "YFIIUSDT",
+   "symbol": "YFIIUSDT",
+   "segment": 1,
+   "listing_utc": "2020-09-03 07:01",
+   "last_bar_utc": "2022-04-12 09:00",
+   "coverage": 0.9913,
+   "missing_1m": 7340,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 836762,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 137,
+    "rows_clean": 836625
+   }
+  },
+  {
+   "inst": "YFIUSDT",
+   "symbol": "YFIUSDT",
+   "segment": 1,
+   "listing_utc": "2020-08-31 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99527,
+   "missing_1m": 10781,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2273340,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3581,
+    "rows_clean": 2269759
+   }
+  },
+  {
+   "inst": "YGGUSDT",
+   "symbol": "YGGUSDT",
+   "segment": 1,
+   "listing_utc": "2023-08-05 03:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99962,
+   "missing_1m": 282,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 741390,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 282,
+    "rows_clean": 741108
+   }
+  },
+  {
+   "inst": "ZECUSDT",
+   "symbol": "ZECUSDT",
+   "segment": 1,
+   "listing_utc": "2020-02-05 08:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.9897,
+   "missing_1m": 26583,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2572799,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 19382,
+    "rows_clean": 2553417
+   }
+  },
+  {
+   "inst": "ZENUSDT",
+   "symbol": "ZENUSDT",
+   "segment": 1,
+   "listing_utc": "2020-11-24 07:00",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99495,
+   "missing_1m": 10904,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2150940,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 3704,
+    "rows_clean": 2147236
+   }
+  },
+  {
+   "inst": "ZETAUSDT",
+   "symbol": "ZETAUSDT",
+   "segment": 1,
+   "listing_utc": "2024-02-02 08:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99959,
+   "missing_1m": 195,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 480450,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 195,
+    "rows_clean": 480255
+   }
+  },
+  {
+   "inst": "ZILUSDT",
+   "symbol": "ZILUSDT",
+   "segment": 1,
+   "listing_utc": "2020-06-18 09:01",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99008,
+   "missing_1m": 23675,
+   "max_gap_min": 4321,
+   "audit": {
+    "rows_raw": 2379779,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 16474,
+    "rows_clean": 2363305
+   }
+  },
+  {
+   "inst": "ZKUSDT",
+   "symbol": "ZKUSDT",
+   "segment": 1,
+   "listing_utc": "2024-06-17 11:07",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99968,
+   "missing_1m": 92,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 284453,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 90,
+    "rows_clean": 284363
+   }
+  },
+  {
+   "inst": "ZROUSDT",
+   "symbol": "ZROUSDT",
+   "segment": 1,
+   "listing_utc": "2024-06-20 14:30",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99968,
+   "missing_1m": 89,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 279930,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 89,
+    "rows_clean": 279841
+   }
+  },
+  {
+   "inst": "ZRXUSDT",
+   "symbol": "ZRXUSDT",
+   "segment": 1,
+   "listing_utc": "2020-06-24 09:02",
+   "last_bar_utc": "2024-12-31 23:59",
+   "coverage": 0.99127,
+   "missing_1m": 20752,
+   "max_gap_min": 75,
+   "audit": {
+    "rows_raw": 2378338,
+    "duplicates": 0,
+    "misaligned": 0,
+    "bad_ohlc": 0,
+    "zero_trade_flat": 20750,
+    "rows_clean": 2357588
+   }
+  }
+ ]
+}
