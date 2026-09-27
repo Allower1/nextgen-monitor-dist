@@ -83,7 +83,7 @@ def build(zone: str) -> dict:
     first_bar = np.full(N, np.iinfo(np.int64).max, np.int64)
     last_bar = np.zeros(N, np.int64)
     # ragged 5m arrays
-    rag_cols = ["open", "high", "low", "close", "exec_open", "exec_open3", "h_after", "l_after", "rv60", "qv24h", "n1m"]
+    rag_cols = ["open", "high", "low", "close", "exec_open", "exec_open3", "h_after", "l_after", "rv60", "qv24h", "n1m", "qv", "tbq"]
     rag = {c: [] for c in rag_cols}
     r_off = np.zeros(N + 1, np.int64)
     r_start = np.zeros(N, np.int64)
