@@ -194,6 +194,8 @@ def run(run_id: str, generations: int, workers: int, pop_per_family: int, seed: 
               "family_best": {f: -99.0 for f in FAMILIES}, "family_stale": {f: 0 for f in FAMILIES},
               "promotion_queue": [], "seen": []}
     seen = set(st["seen"])
+    print(f"[start] run_id={run_id} state_gen={st['gen']} ledger_rows={len(L.read())} "
+          f"n_trials={L.n_trials()} chain_ok={L.verify()} workers={workers}", flush=True)
     ctxm = get_context("fork")
     with ctxm.Pool(workers, initializer=_init_worker, initargs=(zone,)) as pool:
         while st["gen"] < generations and (time.time() - t_start) / 3600 < max_hours:

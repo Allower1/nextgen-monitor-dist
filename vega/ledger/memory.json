@@ -1,8 +1,8 @@
 {
  "run_id": "R1",
- "gen": 12,
+ "gen": 17,
  "family_best": {
-  "momentum_breakout": -1.1204265202584875,
+  "momentum_breakout": -0.9868867362033039,
   "mean_reversion": -1.0878890660988516,
   "vol_expansion": -1.0251071982113777,
   "xs_momentum": -1.3033226070236215,
@@ -11,28 +11,28 @@
   "ridge_wf": -0.5270710080242493
  },
  "family_stale": {
-  "momentum_breakout": 8,
-  "mean_reversion": 5,
-  "vol_expansion": 1,
-  "xs_momentum": 2,
-  "opportunity": 3,
-  "flow_imbalance": 3,
-  "ridge_wf": 2
+  "momentum_breakout": 3,
+  "mean_reversion": 10,
+  "vol_expansion": 6,
+  "xs_momentum": 7,
+  "opportunity": 8,
+  "flow_imbalance": 8,
+  "ridge_wf": 7
  },
  "n_promotion_queue": 0,
  "top": {
   "momentum_breakout": [
    [
-    "f8f283d69a30d2ec",
-    -1.12
+    "c611909d3f777637",
+    -0.987
    ],
    [
-    "167af24d377aba1c",
-    -1.153
+    "5863d8e2d743ca8a",
+    -1.003
    ],
    [
-    "e303cbd4209f671b",
-    -1.169
+    "0712864dd4a47bf2",
+    -1.019
    ]
   ],
   "mean_reversion": [
@@ -45,8 +45,8 @@
     -1.094
    ],
    [
-    "bf8542e854b65c2f",
-    -1.18
+    "1a9b4011d29f2586",
+    -1.108
    ]
   ],
   "vol_expansion": [
@@ -55,12 +55,12 @@
     -1.025
    ],
    [
-    "57afafe6cde85a0f",
-    -1.216
+    "5d519f1d12882028",
+    -1.161
    ],
    [
-    "8fa0e2f9dc5c983c",
-    -1.678
+    "57afafe6cde85a0f",
+    -1.216
    ]
   ],
   "xs_momentum": [
@@ -83,11 +83,11 @@
     -1.43
    ],
    [
-    "3fe349f65c939a1b",
-    -1.598
+    "bfdfed507b311d43",
+    -1.539
    ],
    [
-    "72f0bc360b1f6fe6",
+    "3fe349f65c939a1b",
     -1.598
    ]
   ],
@@ -101,8 +101,8 @@
     -0.85
    ],
    [
-    "7da96bd963bfa9c5",
-    -0.935
+    "ec8a8a37b5dd182d",
+    -0.893
    ]
   ],
   "ridge_wf": [

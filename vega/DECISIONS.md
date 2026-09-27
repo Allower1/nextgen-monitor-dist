@@ -76,3 +76,14 @@ actual historical events (timestamp, rate, symbol) causally — already how the 
 (`universe.load_funding` → `f_time/f_rate` per instrument; `backtest.run_engine` step C charges
 events in (bar_open, bar_close] for open positions, price = last close). Recorded in
 VEGA_PROTOCOL.md §A1; PROTOCOL_MANIFEST.json regenerated (kernel unchanged).
+
+D-019 Migration to the Contabo VPS (user instruction 2026-09-27). R1 stopped cleanly at a
+generation boundary (generations 0–16 complete, state gen = 17, 1 233 ledger rows, chain OK).
+Transport = GitHub branch + `migration/` (compressed archive listing, download manifest with
+per-file SHA256, exchangeInfo, instrument table, CHECKPOINT_HASHES.json incl. SHA256 of all 65
+panel files and pinned library versions in requirements.txt). Raw data is re-downloaded on the
+VPS from the same archive (restored listing ≤ 2025-12 → holdout never listed), each zip must match
+its original SHA256, and the rebuilt panel must be bit-identical before R1 resumes from gen 17.
+Worker count does not change results (independent per-candidate evaluation, ordered map).
+The cloud container has no network path/credentials to the VPS, so the migration itself must be
+executed on the VPS (`scripts/migrate_on_vps.sh`).

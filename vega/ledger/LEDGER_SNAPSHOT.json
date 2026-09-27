@@ -1,7 +1,7 @@
 {
- "rows": 1011,
- "n_trials_counted": 1011,
+ "rows": 1233,
+ "n_trials_counted": 1233,
  "chain_ok": true,
- "last_row_hash": "d01f7548bb302953e340acd01f494e720211653bfba9ba6a1dd50966e1565c1b",
- "sha256_jsonl": "9892c32d91338ca59fabc130dca7767bd08d1ce5323cb81d98bda24215448f26"
+ "last_row_hash": "085f2be7859595b5c0759048f33c71d0e56dcd3321855748323d5e5a747cdf8b",
+ "sha256_jsonl": "1ec7548d8c7f4d6edd3d75323239324e4e62514a8d8fa5c763fb28178b4c8743"
 }

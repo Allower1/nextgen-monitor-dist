@@ -1,13 +1,13 @@
-# NEXT_TASK.md
+# NEXT_TASK.md — MIGRATE TO CONTABO VPS, THEN RESUME R1
 
-State: Phase B data for 2020–2024 downloaded (19 399 files, all checksums OK). Building derived
-panel (`logs/build_dev.log`). Phase C/D/E code done + tested.
+Cloud checkpoint: see PROGRESS.md "Final cloud checkpoint" (R1 stopped after generation 16; state gen 17).
 
-Next exact actions:
-1. Wait for `BUILD DONE dev` in logs/build_dev.log; commit DATA_MANIFEST_dev.{json,md}.
-2. Sanity baselines on real data (random/placebo candidates → expected cost drag).
-3. `scripts/run_bg.sh evo_R1 scripts/evolve.sh R1 <gens> 3 16` (resumable).
-4. `python -m vega_core.promote` → results/promotion_report.json.
-5. If a candidate passes all G1–G13: download 2025 (`python -m vega_core.data.download --zone inner`),
-   `scripts/build_zone.sh inner`, `python -m vega_core.inner_validation`.
-   If none passes: PROMOTE NONE (report), keep evolving within budget.
+On the VPS (user ubuntu):
+    curl -fsSL https://raw.githubusercontent.com/Allower1/nextgen-monitor-dist/<HEAD>/vega/scripts/migrate_on_vps.sh -o /tmp/m.sh
+    CHECKPOINT=<HEAD> bash /tmp/m.sh
+(or clone the branch and run `CHECKPOINT=<HEAD> vega/scripts/migrate_on_vps.sh`).
+It stops with a non-zero exit at the first failed verification (restore hashes, ledger chain,
+tests, per-file data SHA256, bit-identical panel). Only after all pass does it resume R1 from gen 17.
+
+Then: finish R1 → `python -m vega_core.promote` → PROMOTE NONE or falsification / 2025 contaminated
+stress test → HOLDOUT READY stop. Holdout 2026-01-01 → 2026-09-20 stays LOCKED until explicit UNLOCK.
