@@ -28,3 +28,13 @@ Loop: GENERATE → TEST → FALSIFY → REJECT MOST → MUTATE → PROMOTE RAREL
   scanner score composition, anomaly thresholds.
 * IMMUTABLE (kernel): fees, slippage, funding, accounting, zones, future-data rules, next-bar
   execution, caps, gates, data source, leakage protections, capital/leverage.
+
+## Implemented families (v1)
+rule-based: `momentum_breakout`, `mean_reversion`, `vol_expansion`, `xs_momentum` (cross-sectional
+ranking inside the TOP-20), `opportunity` (anomaly-flagged instruments only), `flow_imbalance`
+(taker-buy imbalance); fitted: `ridge_wf` (ridge regression on an evolved feature subset,
+purged expanding walk-forward over half-year blocks, 7-day purge + label horizon, block 2020H1 =
+training only). Common evolvable execution genes: direction, regime filter, SL/TP in volatility
+units, max hold (≤ 144 bars = 12 h), cooldown, exit-on-opposite, size (≤ 0.30), entry timeframe
+(5m / 15m / 30m closes). Scanner genes: weights of 8 activity metrics, anomaly boost, anomaly
+thresholds.

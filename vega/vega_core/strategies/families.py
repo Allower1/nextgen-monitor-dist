@@ -21,6 +21,7 @@ COMMON_SPACE = {
     "cooldown": ("int", 0, 48),
     "exit_on_opp": ("choice", [False, True]),
     "size_frac": ("float", 0.05, 0.30),
+    "entry_tf": ("choice", [5, 15, 30]),   # decisions only at closes of this timeframe (minutes)
 }
 
 SCANNER_SPACE = {**{f"w_{k}": ("float", 0.0, 1.0) for k in SCORE_METRICS},
@@ -47,8 +48,72 @@ FAMILY_SPACE = {
     "flow_imbalance": {
         "tbr_th": ("float", 0.02, 0.3), "z_th": ("float", 0.0, 3.0), "rv_th": ("float", 0.5, 4.0),
         "cont": ("choice", [True, False])},
+    "ridge_wf": {
+        **{f"f_{k}": ("choice", [False, True]) for k in
+           ["z3", "z12", "z48", "z288", "volr", "bbz", "rsi14", "brk48", "brk288", "relv", "tbr3", "emag1h", "emag4h", "fund"]},
+        "h": ("choice", [3, 6, 12, 24, 48]), "lam": ("float", 0.1, 100.0), "th": ("float", 0.5, 4.0)},
 }
 FAMILIES = list(FAMILY_SPACE)
+RIDGE_FEATS = [k[2:] for k in FAMILY_SPACE["ridge_wf"] if k.startswith("f_")]
+PURGE_STEPS = 7 * 288          # 7-day purge + embargo between training data and predicted block
+
+
+def block_starts(ctx):
+    """Step indices where half-year blocks start (UTC Jan 1 / Jul 1) inside the zone."""
+    t0 = np.datetime64(int(ctx.panel.t_start), "ms")
+    days = (np.arange(ctx.T // 288) * np.timedelta64(1, "D")) + t0.astype("datetime64[D]")
+    m = days.astype("datetime64[M]").astype(int) % 12
+    first = (days.astype("datetime64[D]") == days.astype("datetime64[M]").astype("datetime64[D]")) & ((m == 0) | (m == 6))
+    return [0] + [int(i * 288) for i in np.nonzero(first)[0] if i > 0] + [ctx.T]
+
+
+def ridge_target(ctx, h):
+    """Vol-normalised forward return from the next-bar fill to close h bars later (TRAINING ONLY)."""
+    P = ctx.panel
+    sel_t = ctx.cur["sel_inst"][np.arange(ctx.T) // 12]
+    t = np.arange(ctx.T)[:, None]
+    i = np.maximum(sel_t, 0)
+    def rows(tt):
+        k = tt - P.r_start[i]
+        ln = P.r_off[i + 1] - P.r_off[i]
+        ok = (sel_t >= 0) & (k >= 0) & (k < ln)
+        return np.where(ok, P.r_off[i] + np.clip(k, 0, None), 0), ok
+    r1, ok1 = rows(t + 1)
+    rh, okh = rows(t + h)
+    ex = np.asarray(P.r["exec_open"])[r1]
+    cl = np.asarray(P.r["close"])[rh]
+    with np.errstate(all="ignore"):
+        y = np.log(cl / ex) / (ctx.gather("vol48") * np.sqrt(h))
+    y = np.where(ok1 & okh, y, np.nan)
+    return np.clip(y, -10, 10)
+
+
+def ridge_predict(spec, ctx):
+    p = spec["params"]
+    feats = [k for k in RIDGE_FEATS if p.get(f"f_{k}")] or ["z12"]
+    X = np.stack([ctx.gather(k) for k in feats], -1)          # [T, S, F]
+    y = ridge_target(ctx, int(p["h"]))
+    pred = np.full(y.shape, np.nan, np.float32)
+    thr = np.full(y.shape, np.inf, np.float32)
+    bs = block_starts(ctx)
+    for b in range(1, len(bs) - 1):
+        s0, s1 = bs[b], bs[b + 1]
+        tr_end = s0 - PURGE_STEPS - int(p["h"])               # label horizon fully before purge
+        if tr_end <= 288 * 30:
+            continue
+        Xt = X[:tr_end:3].reshape(-1, len(feats)); yt = y[:tr_end:3].reshape(-1)
+        ok = np.isfinite(Xt).all(1) & np.isfinite(yt)
+        if ok.sum() < 5000:
+            continue
+        Xt, yt = Xt[ok].astype(np.float64), yt[ok].astype(np.float64)
+        mu, sd = Xt.mean(0), Xt.std(0) + 1e-9
+        Z = (Xt - mu) / sd
+        w = np.linalg.solve(Z.T @ Z + p["lam"] * np.eye(len(feats)), Z.T @ (yt - yt.mean()))
+        ptr = Z @ w
+        Xb = (X[s0:s1].astype(np.float64) - mu) / sd
+        pred[s0:s1] = (Xb @ w).astype(np.float32)
+        thr[s0:s1] = p["th"] * ptr.std()
+    return pred, thr
 
 
 def _nz(a):
@@ -123,6 +188,11 @@ def raw_direction(spec, ctx):
             d = np.sign(_nz(z)) * (1 if p["cont"] else -1)
             lc = base & (d > 0); sc = base & (d < 0)
             strength = np.abs(_nz(z))
+        elif fam == "ridge_wf":
+            pred, thr = ridge_predict(spec, ctx)
+            lc = pred > thr
+            sc = pred < -thr
+            strength = np.abs(_nz(pred))
         elif fam == "flow_imbalance":
             t = G("tbr3"); z = G("z3"); rv = G("relv")
             base = (np.abs(t) > p["tbr_th"]) & (rv > p["rv_th"]) & (np.sign(_nz(t)) * _nz(z) > p["z_th"])
@@ -144,6 +214,9 @@ def signals(spec, ctx):
     lc = lc & regime_mask(e["regime"], ctx, +1)
     sc = sc & regime_mask(e["regime"], ctx, -1)
     valid = ctx.valid_ts
+    tf = int(e.get("entry_tf", 5)) // 5
+    if tf > 1:  # a resampled 15m/30m bar is usable only at its close
+        valid = valid & (((np.arange(ctx.T) + 1) % tf) == 0)[:, None]
     sig = np.where(lc & valid, 1, np.where(sc & valid, -1, 0)).astype(np.int8)
     vol = ctx.gather("vol48")
     unit = _nz(vol) * np.sqrt(max(int(e["max_hold"]), 1))

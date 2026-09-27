@@ -28,3 +28,7 @@ Liquidations: not used. Spread: modelled via the slippage proxy, never invented.
 TOP-20: the 20 highest-scoring eligible instruments at hour H (tie-break instrument id); held
 fixed for the hour [H, H+1h). Positions opened earlier are managed even if the symbol drops out
 of the TOP-20 (no new entries).
+
+Frozen POOL (DECISIONS D-013): each hour the universe layer forms a pool of ≤ 50 eligible
+instruments (top-40 by trailing-24h quote volume + ≤ 10 anomaly instruments by xs-rank of
+rv_ratio/rel_vol). The candidate's scanner ranks only inside this pool.

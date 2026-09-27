@@ -37,3 +37,21 @@ NOT used in v1 (partial-period features could reward "data appearance").
 D-010 Background jobs: `setsid nohup nice -n 10 ionice -c3` (systemd user units are not usable in
 this container). Jobs checkpoint to disk and resume; the container itself is ephemeral, so the
 authoritative state is what is committed and pushed (code, ledger, manifests, summaries).
+
+D-011 Git tags cannot be pushed through this environment's git proxy (branch pushes work). The
+protocol freeze is therefore identified remotely by commit `73c989f` (Phase A) and
+`PROTOCOL_MANIFEST.json` (SHA256 of kernel + protocol, verified by tests); the annotated tag
+`vega-protocol-freeze-v1` exists in the local clone.
+
+D-012 Disk plan (31 GB allowance): 1m parquet ≈ zip size (~13.8 GB dev, ~8 GB 2025). Pipeline per
+zone: download → derive (5m + hourly parquet) → panel (npy memmaps) → features; afterwards the
+raw 1m parquet of that zone may be deleted (re-downloadable and verifiable from
+`data/meta/download_manifest.jsonl`, which keeps Binance checksums + own SHA256).
+
+D-013 Frozen candidate POOL (universe layer, not mutable): per hour, top-40 eligible by trailing
+24h quote volume + up to 10 "anomaly" instruments (max of xs-rank of rv_ratio / rel_vol) among the
+remaining eligible. The candidate's mutable scanner picks its TOP-20 from this pool of ≤ 50.
+Reason: keeps feature panels computable (T × 50) while still letting crisis/anomaly coins in.
+
+D-014 Short-lived symbols: every USDT perp in the archive has monthly files for its months, so
+no daily-file supplement is needed (checked: 0 daily-only symbols).

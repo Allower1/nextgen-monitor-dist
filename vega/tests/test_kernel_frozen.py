@@ -76,3 +76,16 @@ def test_holdout_lock(monkeypatch):
     with pytest.raises(K.LeakageError):
         K.ZoneGuard("holdout")
     assert not K.archive_month_allowed("2026-01") and K.archive_month_allowed("2025-12")
+
+
+def test_holdout_runner_refuses_without_unlock(monkeypatch):
+    monkeypatch.delenv("VEGA_TEST_FAKE_UNLOCK", raising=False)
+    from vega_core import holdout
+    with pytest.raises(K.LeakageError):
+        holdout.preflight()
+
+
+def test_inner_panel_requires_inner_mode():
+    from vega_core.universe import Panel
+    with pytest.raises(K.LeakageError):
+        Panel("inner", mode="evolution")

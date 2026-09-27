@@ -22,3 +22,18 @@ tag `vega-protocol-freeze-v1`. Tests: 7 passed / 0 failed.
 
 Untouched-data status: 2025 inner validation — not downloaded; 2026 holdout — not downloaded,
 not listed.
+
+## Phase B — data engineering (in progress, 2026-09-27)
+* Archive discovery (`vega_core/data/discover.py`, 257 s): **638 USDT-M perpetual symbols** in the
+  archive with 1m files ≤ 2025-12 (incl. delisted); keys dated ≥ 2026-01 dropped unseen.
+  1m zip volume: 2020–2024 = 13.80 GB (9 706 files), 2025 = 8.03 GB (5 980 files).
+  Symbols by first month (≥ 2020): 2020: 81, 2021: 59, 2022: 26, 2023: 99, 2024: 131, 2025: 242.
+* Funding history 2020–2024: 9 633 monthly files downloaded, all checksums OK.
+* 1m klines 2020–2024 downloading (resumable; parquet zstd; Binance CHECKSUM + own SHA256 per
+  file in `data/meta/download_manifest.jsonl`).
+* Current exchangeInfo (www.binance.com/fapi, public) stored for step/minNotional only.
+
+## Phase C/D/E code (written + unit-tested before any real-data backtest)
+universe panel, frozen pool, scanner, feature library, numba engine, metrics (DSR, PBO/CSCV,
+bootstrap), 7 strategy families (6 rule-based + ridge walk-forward), evolution engine,
+hash-chained trial ledger, gates G1–G14, falsification suite. Tests: 44 passed / 0 failed.
