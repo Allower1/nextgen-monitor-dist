@@ -1,6 +1,6 @@
 # VEGA: never commit data, secrets, caches
-data/
-logs/
+/data/
+/logs/
 results/cache/
 *.parquet
 *.zip
