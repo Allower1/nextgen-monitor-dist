@@ -89,30 +89,44 @@ def ridge_target(ctx, h):
 
 
 def ridge_predict(spec, ctx):
+    """Purged expanding walk-forward ridge. Training moments are accumulated once over segments
+    between training cut points (exactly equivalent to refitting on each expanding window)."""
     p = spec["params"]
     feats = [k for k in RIDGE_FEATS if p.get(f"f_{k}")] or ["z12"]
+    F = len(feats)
+    h = int(p["h"])
     X = np.stack([ctx.gather(k) for k in feats], -1)          # [T, S, F]
-    y = ridge_target(ctx, int(p["h"]))
+    y = ridge_target(ctx, h)
     pred = np.full(y.shape, np.nan, np.float32)
     thr = np.full(y.shape, np.inf, np.float32)
     bs = block_starts(ctx)
+    cuts = []
     for b in range(1, len(bs) - 1):
+        cuts.append(max(0, bs[b] - PURGE_STEPS - h))          # label horizon fully before purge
+    # segment moments between consecutive cuts (rows subsampled every 3rd step)
+    n = 0.0; sx = np.zeros(F); sxx = np.zeros((F, F)); sxy = np.zeros(F); sy = 0.0
+    prev = 0
+    for b, cut in zip(range(1, len(bs) - 1), cuts):
+        if cut > prev:
+            t0 = prev + ((-prev) % 3)
+            Xs = X[t0:cut:3].reshape(-1, F).astype(np.float64); ys = y[t0:cut:3].reshape(-1).astype(np.float64)
+            ok = np.isfinite(Xs).all(1) & np.isfinite(ys)
+            Xs, ys = Xs[ok], ys[ok]
+            n += len(ys); sx += Xs.sum(0); sxx += Xs.T @ Xs; sxy += Xs.T @ ys; sy += ys.sum()
+            prev = cut
+        if cut <= 288 * 30 or n < 5000:
+            continue
+        mu = sx / n
+        var = np.maximum(np.diag(sxx) / n - mu ** 2, 0.0)
+        sd = np.sqrt(var) + 1e-9
+        C = (sxx - n * np.outer(mu, mu)) / np.outer(sd, sd)      # Z'Z
+        r = (sxy - n * mu * (sy / n)) / sd                        # Z'(y - ybar)
+        w = np.linalg.solve(C + p["lam"] * np.eye(F), r)
+        ptr_sd = float(np.sqrt(max(w @ C @ w / n, 0.0)))
         s0, s1 = bs[b], bs[b + 1]
-        tr_end = s0 - PURGE_STEPS - int(p["h"])               # label horizon fully before purge
-        if tr_end <= 288 * 30:
-            continue
-        Xt = X[:tr_end:3].reshape(-1, len(feats)); yt = y[:tr_end:3].reshape(-1)
-        ok = np.isfinite(Xt).all(1) & np.isfinite(yt)
-        if ok.sum() < 5000:
-            continue
-        Xt, yt = Xt[ok].astype(np.float64), yt[ok].astype(np.float64)
-        mu, sd = Xt.mean(0), Xt.std(0) + 1e-9
-        Z = (Xt - mu) / sd
-        w = np.linalg.solve(Z.T @ Z + p["lam"] * np.eye(len(feats)), Z.T @ (yt - yt.mean()))
-        ptr = Z @ w
         Xb = (X[s0:s1].astype(np.float64) - mu) / sd
         pred[s0:s1] = (Xb @ w).astype(np.float32)
-        thr[s0:s1] = p["th"] * ptr.std()
+        thr[s0:s1] = p["th"] * ptr_sd
     return pred, thr
 
 
@@ -167,7 +181,7 @@ def raw_direction(spec, ctx):
         elif fam == "xs_momentum":
             z = G(f"z{p['k']}")
             zz = np.where(np.isfinite(z), z, np.nan)
-            reb = (np.arange(ctx.T) % p["m"]) == 0
+            reb = ((np.arange(ctx.T) + 1) % p["m"]) == 0
             q = p["q"]
             with np.errstate(all="ignore"):
                 order = np.argsort(np.where(np.isfinite(zz), -zz, np.inf), axis=1)

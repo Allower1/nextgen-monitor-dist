@@ -55,3 +55,17 @@ Reason: keeps feature panels computable (T × 50) while still letting crisis/ano
 
 D-014 Short-lived symbols: every USDT perp in the archive has monthly files for its months, so
 no daily-file supplement is needed (checked: 0 daily-only symbols).
+
+D-015 Zero-trade flat 1m bars (count = 0 and O = H = L = C) are the archive's forward-filled
+prices during maintenance/halts (e.g. BTCUSDT 2021-03-02 01:00, 2022-05-28 16:00–17:00). They
+are treated as MISSING (no fills, halt rule applies, count against 24h coverage). Conservative.
+
+D-016 (before any real-data evolution) DSR implementation for G7: N = number of counted ledger
+rows (stages screen/stress/gate/falsify/inner) at evaluation time; V[SR] = variance of the daily
+(non-annualised) Sharpe of all counted rows; SR0 = E[max] formula of Bailey & López de Prado;
+skew/kurtosis from the candidate's daily returns over active days. Conservative (every
+re-evaluation counts as a trial). Placebo runs are logged inside the falsification report, not as
+trials (they are not candidate configurations).
+
+D-017 ridge_wf fitting uses cumulative training moments over the purged expanding window (exactly
+equivalent to refitting ridge on each window; training rows subsampled every 3rd 5m step).

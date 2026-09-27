@@ -191,3 +191,11 @@ def test_scanner_uses_previous_hour_only():
     assert sel_inst[3, 0] == 1           # visible in hour 3
     assert sel_inst[2, 0] == 0           # not in hour 2 (tie → lowest id)
     assert flag[3, 1] and not flag[2, 1]
+
+
+def test_zero_trade_flat_bars_are_missing():
+    df = mk_1m(20)
+    df.loc[5, ["open", "high", "low", "close"]] = df.loc[4, "close"]
+    df.loc[5, "count"] = 0
+    c, a = D.audit_and_clean(df)
+    assert a["zero_trade_flat"] == 1 and len(c) == 19
