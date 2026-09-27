@@ -1,6 +1,6 @@
 {
  "run_id": "R1",
- "gen": 11,
+ "gen": 12,
  "family_best": {
   "momentum_breakout": -1.1204265202584875,
   "mean_reversion": -1.0878890660988516,
@@ -11,13 +11,13 @@
   "ridge_wf": -0.5270710080242493
  },
  "family_stale": {
-  "momentum_breakout": 7,
-  "mean_reversion": 4,
-  "vol_expansion": 0,
-  "xs_momentum": 1,
-  "opportunity": 2,
-  "flow_imbalance": 2,
-  "ridge_wf": 1
+  "momentum_breakout": 8,
+  "mean_reversion": 5,
+  "vol_expansion": 1,
+  "xs_momentum": 2,
+  "opportunity": 3,
+  "flow_imbalance": 3,
+  "ridge_wf": 2
  },
  "n_promotion_queue": 0,
  "top": {
@@ -59,8 +59,8 @@
     -1.216
    ],
    [
-    "439aef807aea8732",
-    -1.728
+    "8fa0e2f9dc5c983c",
+    -1.678
    ]
   ],
   "xs_momentum": [
