@@ -1,0 +1,9 @@
+{
+  "tag": "vega-protocol-freeze-v1",
+  "created_utc": "2026-09-27T06:59:50.281398Z",
+  "kernel_version": "1.0.0",
+  "files": {
+    "vega_core/kernel.py": "1b2c839d9d15a0fa6fe85c57d019a6574c12119d1618d61e9278c9078b639856",
+    "VEGA_PROTOCOL.md": "3a32ef559ca0d87e7937735ceb3f447911e1645d189b4e3b203ea12d3454cea7"
+  }
+}

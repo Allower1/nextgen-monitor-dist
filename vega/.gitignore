@@ -1,0 +1,17 @@
+# VEGA: never commit data, secrets, caches
+data/
+logs/
+results/cache/
+*.parquet
+*.zip
+*.npz
+*.npy
+.env
+.env.*
+*.key
+*.pem
+secrets*
+__pycache__/
+*.pyc
+.pytest_cache/
+HOLDOUT_UNLOCKED
