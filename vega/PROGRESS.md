@@ -52,3 +52,15 @@ hash-chained trial ledger, gates G1–G14, falsification suite. Tests: 44 passed
 `scripts/run_bg.sh evo_R1 scripts/evolve.sh R1 400 3 16` (PID in logs/evo_R1.pid). 7 families × 16/gen,
 ~1.4 min/generation, ~4 GB RAM, 3 workers (1 core free).
 Random candidates (gen 0): all negative after costs (e.g. −23 … −67 bps/trade) — costs dominate as expected.
+
+## Final cloud checkpoint (2026-09-27, before migration to Contabo)
+* R1 stopped cleanly at a generation boundary: generations 0–16 complete, `results/evo_state.json`
+  gen = 17 (resume point), ledger 1 233 rows = 1 233 counted trials, hash chain OK, last row hash
+  `085f2be7…cdf8b`, sha256(trials.jsonl) `1ec7548d…8743`. Promotion queue: 0 (no candidate passed
+  screening; best soft fitness −0.53 … −0.90, expectancy −13 … −21 bps/trade after costs).
+* Migration package `migration/` + `vega_core/migration_verify.py` + `scripts/migrate_on_vps.sh`.
+  Dry run on a fresh GitHub clone: restore OK (critical hashes, ledger chain), 47/47 tests, code
+  identical to source, re-downloaded sample zips match original SHA256.
+* Fixed: `.gitignore` rule `data/` had excluded the `vega_core/data/` package from git (now `/data/`).
+* Holdout 2026-01-01 → 2026-09-20: not listed, not downloaded. 2025: not downloaded.
+* Cloud copy kept as backup (not deleted).

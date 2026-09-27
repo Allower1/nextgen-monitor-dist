@@ -3,9 +3,9 @@
 Cloud checkpoint: see PROGRESS.md "Final cloud checkpoint" (R1 stopped after generation 16; state gen 17).
 
 On the VPS (user ubuntu):
-    curl -fsSL https://raw.githubusercontent.com/Allower1/nextgen-monitor-dist/<HEAD>/vega/scripts/migrate_on_vps.sh -o /tmp/m.sh
-    CHECKPOINT=<HEAD> bash /tmp/m.sh
-(or clone the branch and run `CHECKPOINT=<HEAD> vega/scripts/migrate_on_vps.sh`).
+    curl -fsSL https://raw.githubusercontent.com/Allower1/nextgen-monitor-dist/the HEAD recorded in PROGRESS.md (branch claude/vega-intraday-evolution-gyfsac)/vega/scripts/migrate_on_vps.sh -o /tmp/m.sh
+    CHECKPOINT=the HEAD recorded in PROGRESS.md (branch claude/vega-intraday-evolution-gyfsac) bash /tmp/m.sh
+(or clone the branch and run `CHECKPOINT=the HEAD recorded in PROGRESS.md (branch claude/vega-intraday-evolution-gyfsac) vega/scripts/migrate_on_vps.sh`).
 It stops with a non-zero exit at the first failed verification (restore hashes, ledger chain,
 tests, per-file data SHA256, bit-identical panel). Only after all pass does it resume R1 from gen 17.
 
