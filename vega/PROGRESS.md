@@ -37,3 +37,18 @@ not listed.
 universe panel, frozen pool, scanner, feature library, numba engine, metrics (DSR, PBO/CSCV,
 bootstrap), 7 strategy families (6 rule-based + ridge walk-forward), evolution engine,
 hash-chained trial ledger, gates G1–G14, falsification suite. Tests: 44 passed / 0 failed.
+
+## Phase B complete (2026-09-27 07:41 UTC)
+* 2020–2024: 9 706 kline files (13.80 GB zip, 416 033 480 1m rows) + 9 693 funding files; 19 399/19 399
+  checksums OK. Audit: 0 duplicates, 0 misaligned, 0 bad OHLC, 18 223 940 zero-trade flat bars → missing (D-015).
+* 396 symbols → 399 instruments (BNX, ICP, TLM split into two segments); 59 ended before 2024-12-31.
+* Eligible instruments per hour (median): 2020 17 · 2021 113 · 2022 135 · 2023 150 · 2024 229.
+  Distinct instruments that entered the pool: 2020 80 · 2021 136 · 2022 163 · 2023 245 · 2024 362.
+* Panel: T = 526 176 5m steps, H = 43 848 h, 80.1 M ragged 5m rows, 951 831 funding events.
+* Build times: download 2×~10 min, derive 143 s, panel 95 s, features 218 s. Raw 1m dev parquet deleted
+  after derive (D-012), except 2024-12 (inner warm-up).
+
+## Phase E/F — evolution R1 started 07:42 UTC
+`scripts/run_bg.sh evo_R1 scripts/evolve.sh R1 400 3 16` (PID in logs/evo_R1.pid). 7 families × 16/gen,
+~1.4 min/generation, ~4 GB RAM, 3 workers (1 core free).
+Random candidates (gen 0): all negative after costs (e.g. −23 … −67 bps/trade) — costs dominate as expected.
